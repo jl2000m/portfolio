@@ -10,7 +10,9 @@ import {
   Cpu,
   Lightbulb,
   Layers,
+  Workflow,
 } from "lucide-react";
+import { RagWorkflowBlock } from "@/components/RagWorkflowBlock";
 import StatusBadge from "@/components/StatusBadge";
 import TechBadge from "@/components/TechBadge";
 import { ProjectDetailPreview } from "@/components/ProjectMedia";
@@ -134,6 +136,23 @@ export function ProjectDetailClient({
             <p className="text-muted leading-relaxed">{p.problem}</p>
           </div>
         </section>
+
+        {project.slug === "cobertura-completa-advisor" && (
+          <section>
+            <div className="flex items-center gap-3 mb-6">
+              <span
+                className="w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0"
+                style={{ backgroundColor: `${project.accent}12` }}
+              >
+                <Workflow size={16} style={{ color: project.accent }} />
+              </span>
+              <h2 className="font-jakarta font-bold text-xl text-fg">
+                {d.howItWorks}
+              </h2>
+            </div>
+            <RagWorkflowBlock />
+          </section>
+        )}
 
         <section>
           <div className="flex items-center gap-3 mb-6">

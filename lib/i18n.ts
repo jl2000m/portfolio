@@ -162,7 +162,7 @@ export const translations = {
       pages: "Pages",
       contact: "Contact",
       logosDisclaimer:
-        "I don't own these brands—logos belong to their owners. Shown for context only; they may be past employers, clients, or otherwise tied to my work.",
+        "I don't own these brands. Logos belong to their owners. Shown for context; may be past employers, clients, or tied to my work.",
       rights: "© 2026 José Martínez. All rights reserved.",
       built: "Built with Next.js & Tailwind",
     },
@@ -286,7 +286,7 @@ export const translations = {
         "An old recording from when I was learning out loud: walking through a small program that checks whether an email is valid.",
       youngTutorialVideoOpenYouTube: "Open on YouTube",
       bio: [
-        "I've been building things since before I knew what \"software\" meant. Assembled my first PC at 6, built hobby websites as a teenager, and eventually turned that curiosity into a career. I started Software Engineering at UTP in 2017, dropped out after two years, and pivoted to Digital Business. Not because I lost interest in technology. Because I realized I wanted to connect it to real commercial problems.",
+        "I've been building things since before I knew what \"software\" meant. First PC at 6, hobby sites as a teen, then it became a career. Started Software Engineering at UTP in 2017, dropped out after two years, switched to Digital Business. Not because I lost interest in tech. I wanted to connect it to real business problems.",
         "Since 2019 I've been in the digital industry. Seven years learning how businesses actually grow. Most of that time at Seguros SURA, where I led Panama's first multiproduct digital insurance platform, growing it +200% YoY and managing more than $2M in digital sales.",
         "Today I work at Astro Asistencias, a startup where I was the first hire and lead digital sales while also building product. On the side I ship personal projects, like Birriapp. I share what I learn on Instagram and TikTok (@josem.crea) in Spanish, for the LatAm builder community.",
       ],
@@ -297,12 +297,12 @@ export const translations = {
           company: "Astro Asistencias",
           location: "Panama City, Panama",
           description:
-            "Astro is a startup and I was the company's first hire. I lead digital sales strategy and growth while also building product: landing pages, integrations, automation flows, and the digital sales funnel from scratch.",
+            "Astro's a startup. I was the first hire. I run digital sales and growth, and I also build: landing pages, integrations, automation, the whole funnel from scratch.",
           tags: ["Digital Sales", "Growth", "InsurTech", "Product", "Performance Media"],
           accent: "#0066FF",
           image: "/IMG_0123.jpg",
           imageAlt: "At Astro Asistencias",
-          imagePosition: "50% 40%",
+          imagePosition: "50% 32%",
         },
         {
           year: "Sep 2019 · Oct 2025",
@@ -310,7 +310,7 @@ export const translations = {
           company: "Seguros SURA",
           location: "Panama",
           description:
-            "Led the launch and growth of Panama's first multiproduct digital insurance platform. Drove +200% YoY growth and managed more than $2M in digital channel sales. Built and managed a 4-member team generating 5k+ monthly leads, cutting CPL by 50% between 2023 and 2024. Owned the roadmap, analytics, and commercial strategy end-to-end.",
+            "Launched and grew Panama's first multiproduct digital insurance platform. +200% YoY, more than $2M in digital sales. Built a 4-person team hitting 5k+ monthly leads and cut CPL 50% between 2023 and 2024. Owned roadmap, analytics, and commercial strategy.",
           tags: ["E-commerce", "Product Owner", "Performance Media", "CRO", "Analytics"],
           accent: "#3ecf8e",
           image: "/about/sura-speech.jpg",
@@ -322,7 +322,7 @@ export const translations = {
           company: "Aden International Business School · B.S. in Digital Business (Licenciatura)",
           location: "Panama",
           description:
-            "Degree in Digital Business, Entrepreneurship, and Innovation. Studying business strategy, digital transformation, and venture building while working full-time. Expected graduation 2028.",
+            "Degree in Digital Business, Entrepreneurship, and Innovation. I study business strategy, digital transformation, and venture building while working full-time. Grad expected 2028.",
           tags: ["Digital Business", "Entrepreneurship", "Innovation"],
           accent: "#9d7cf0",
           type: "education" as const,
@@ -335,13 +335,13 @@ export const translations = {
           company: "UTP · Universidad Tecnológica de Panamá",
           location: "Panama City",
           description:
-            "Two years into a CS degree at UTP (Universidad Tecnológica de Panamá), Panama's top university for engineering. I realized I wanted to connect technology to real business problems, not just study it in abstract. Dropped out and shifted to Digital Business. Those two years gave me a foundation in systems thinking that still informs how I build today.",
+            "Two years of CS at UTP (Universidad Tecnológica de Panamá), Panama's top engineering school. I figured out I wanted to connect tech to real business problems, not study it in the abstract. Dropped out and switched to Digital Business. Those two years stuck: systems thinking still shapes how I build.",
           tags: ["Computer Science", "Programming", "Systems Thinking"],
           accent: "#9d7cf0",
           type: "education" as const,
           image: "/20190603_110856.jpg",
           imageAlt: "Studying at UTP (Universidad Tecnológica de Panamá)",
-          imagePosition: "50% 29%",
+          imagePosition: "50% 22%",
         },
         {
           year: "Age 6 onwards",
@@ -349,12 +349,12 @@ export const translations = {
           company: "Hobby and curiosity",
           location: "Early years",
           description:
-            "My dad owned a computer parts and repair shop—he assembled systems and swapped components for customers. I'd watch him work, copy what he did, and before long I was building custom PCs for customers myself, from a very young age. That hands-on foundation—hardware before software, systems before code—is what makes the technical side feel natural today.",
+            "My dad had a computer parts and repair shop. He built PCs for customers and fixed what broke. I watched him, mimicked what he did, and pretty soon I was building custom PCs for customers too. I was young. That's where the hardware itch started. Hardware before software, systems before code. The technical side has always felt natural.",
           tags: ["Hardware", "PC building", "Self-taught", "Curiosity"],
           accent: "#6B6B6B",
           type: "education" as const,
           image: "/IMG_4131.JPG",
-          imageAlt: "Wearing a builder/constructor costume—builder from the core",
+          imageAlt: "Wearing a builder costume, age 6. Builder from the start.",
           imagePosition: "50% 15%",
           icon: "builder" as const,
         },
@@ -376,7 +376,7 @@ export const translations = {
       merkappArticle: {
         title: "The best online supermarket experience I've had",
         description:
-          "A walkthrough of search that understands intent, predictive results, frictionless cart actions, clear delivery windows, substitution preferences, local payment options, and WhatsApp updates. Why UX was the real product.",
+          "Search that gets intent, predictive results, one-tap cart actions, clear delivery windows, substitution preferences, local payments, WhatsApp updates. UX was the real product.",
         openExternal: "Read on LinkedIn",
         openUrl:
           "https://www.linkedin.com/pulse/la-mejor-experiencia-de-supermercado-online-que-he-tenido-mart%C3%ADnez-ygqke/",
@@ -403,6 +403,7 @@ export const translations = {
       viewLive: "View live",
       code: "Code",
       problem: "The problem",
+      howItWorks: "How the system works",
       features: "Key features",
       techStack: "Tech stack",
       architecture: "Architecture",
@@ -419,6 +420,49 @@ export const translations = {
       openProductionUrl: "Open production URL →",
       iframeBlocked: "If it doesn't load, the site may block iframes.",
       openInNewTab: "open in new tab",
+    },
+    ragWorkflow: {
+      nodes: [
+        {
+          type: "trigger",
+          typeLabel: "Trigger",
+          title: "User Question",
+          description:
+            "Shopper asks about conditions, exclusions, or which plan",
+        },
+        {
+          type: "condition",
+          typeLabel: "Condition",
+          title: "Route",
+          description:
+            "Simple path (price) vs full RAG when policy language needed",
+        },
+        {
+          type: "action",
+          typeLabel: "Action",
+          title: "Vector Search",
+          description: "Semantic search on embedded insurer-approved docs",
+        },
+        {
+          type: "action",
+          typeLabel: "Action",
+          title: "Retrieve Chunks",
+          description: "Fetch relevant policy chunks from Postgres",
+        },
+        {
+          type: "action",
+          typeLabel: "Action",
+          title: "LLM Generation",
+          description:
+            "Answer with context, flagship models (OpenAI, Anthropic)",
+        },
+        {
+          type: "action",
+          typeLabel: "Action",
+          title: "Output + CRM",
+          description: "Structured response to UI, sync to contact record",
+        },
+      ],
     },
   },
 
@@ -584,7 +628,7 @@ export const translations = {
       pages: "Páginas",
       contact: "Contacto",
       logosDisclaimer:
-        "No soy titular de estas marcas; los logotipos pertenecen a sus dueños. Aparecen solo como contexto: pueden ser empleadores anteriores, clientes u otra relación con mi trabajo.",
+        "No soy dueño de estas marcas. Los logos son de sus dueños. Los muestro como contexto; pueden ser empleadores, clientes o gente con la que he trabajado.",
       rights: "© 2026 José Martínez. Todos los derechos reservados.",
       built: "Construido con Next.js y Tailwind",
     },
@@ -708,7 +752,7 @@ export const translations = {
         "Una grabación vieja, aprendiendo en voz alta: un programa que verifica si un correo es válido.",
       youngTutorialVideoOpenYouTube: "Abrir en YouTube",
       bio: [
-        "He estado construyendo cosas desde antes de saber qué significaba \"software\". Armé mi primera PC a los 6 años, construí sitios web por hobby de adolescente, y eventualmente convertí esa curiosidad en una carrera. Empecé Ingeniería en Sistemas en la UTP en 2017, la dejé después de dos años y me pasé a Negocios Digitales. No porque perdí el interés en la tecnología. Sino porque me di cuenta de que quería conectarla con problemas comerciales reales.",
+        "He estado construyendo cosas desde antes de saber qué era \"software\". Primera PC a los 6, sitios por hobby de adolescente, después se volvió carrera. Empecé Ingeniería en Sistemas en la UTP en 2017, la dejé a los dos años y me pasé a Negocios Digitales. No porque perdí interés en la tecnología. Quería conectarla con problemas de negocio reales.",
         "Desde 2019 estoy en la industria digital. Siete años aprendiendo cómo crecen los negocios de verdad. La mayor parte de ese tiempo en Seguros SURA, donde lideré la primera plataforma digital multiproducto de seguros en Panamá, haciéndola crecer +200% YoY y gestionando más de $2M en ventas digitales.",
         "Hoy trabajo en Astro Asistencias, una startup donde fui la primera contratación y lidero ventas digitales mientras también construyo producto. En paralelo lanzo proyectos personales, como Birriapp. Comparto lo que aprendo en Instagram y TikTok (@josem.crea) en español, para la comunidad de builders de LatAm.",
       ],
@@ -719,7 +763,7 @@ export const translations = {
           company: "Astro Asistencias",
           location: "Ciudad de Panamá, Panamá",
           description:
-            "Astro es una startup y fui la primera contratación. Lidero la estrategia de ventas digitales y el growth mientras también construyo producto: landing pages, integraciones, flujos de automatización y el embudo de ventas digitales desde cero.",
+            "Astro es startup. Fui la primera contratación. Lidero ventas digitales y growth, y también construyo: landing pages, integraciones, automatización, el embudo completo desde cero.",
           tags: [
             "Ventas digitales",
             "Growth",
@@ -730,7 +774,7 @@ export const translations = {
           accent: "#0066FF",
           image: "/IMG_0123.jpg",
           imageAlt: "En Astro Asistencias",
-          imagePosition: "50% 40%",
+          imagePosition: "50% 32%",
         },
         {
           year: "Sep 2019 · Oct 2025",
@@ -738,7 +782,7 @@ export const translations = {
           company: "Seguros SURA",
           location: "Panamá",
           description:
-            "Lideré el lanzamiento y el crecimiento de la primera plataforma digital multiproducto de seguros de Panamá. +200% YoY y más de $2M en ventas del canal digital. Organicé un equipo de 4 personas que generaba más de 5k leads mensuales, reduciendo el CPL un 50% entre 2023 y 2024. Dueño del roadmap, analítica y estrategia comercial de punta a punta.",
+            "Lancé y crecí la primera plataforma digital multiproducto de seguros en Panamá. +200% YoY, más de $2M en ventas digitales. Organicé un equipo de 4 que generaba 5k+ leads mensuales y bajé el CPL 50% entre 2023 y 2024. Dueño del roadmap, analítica y estrategia comercial.",
           tags: [
             "E-commerce",
             "Product Owner",
@@ -756,7 +800,7 @@ export const translations = {
           company: "Aden International Business School · Licenciatura en Negocios Digitales",
           location: "Panamá",
           description:
-            "Carrera en Negocios Digitales, Emprendimiento e Innovación. Estudio estrategia de negocio, transformación digital y construcción de ventures mientras trabajo tiempo completo. Graduación prevista en 2028.",
+            "Carrera en Negocios Digitales, Emprendimiento e Innovación. Estudio estrategia de negocio, transformación digital y ventures mientras trabajo full-time. Graduación prevista 2028.",
           tags: ["Negocios digitales", "Emprendimiento", "Innovación"],
           accent: "#9d7cf0",
           type: "education" as const,
@@ -769,13 +813,13 @@ export const translations = {
           company: "UTP · Universidad Tecnológica de Panamá",
           location: "Ciudad de Panamá",
           description:
-            "Dos años de carrera en sistemas en la UTP (Universidad Tecnológica de Panamá), la principal universidad de ingeniería del país. Me di cuenta de que quería conectar la tecnología con problemas de negocio reales, no solo estudiarla en abstracto. Dejé la carrera y me pasé a Negocios Digitales. Esos dos años me dieron una base de pensamiento en sistemas que todavía guía cómo construyo.",
+            "Dos años de sistemas en la UTP (Universidad Tecnológica de Panamá), la principal de ingeniería del país. Me di cuenta de que quería conectar la tecnología con problemas reales, no estudiarla en abstracto. Dejé la carrera y me pasé a Negocios Digitales. Esos dos años quedaron: el pensamiento en sistemas todavía guía cómo construyo.",
           tags: ["Ingeniería de sistemas", "Programación", "Pensamiento sistémico"],
           accent: "#9d7cf0",
           type: "education" as const,
           image: "/20190603_110856.jpg",
           imageAlt: "Estudiando en la UTP (Universidad Tecnológica de Panamá)",
-          imagePosition: "50% 29%",
+          imagePosition: "50% 22%",
         },
         {
           year: "Desde los 6 años",
@@ -783,12 +827,12 @@ export const translations = {
           company: "Hobby y curiosidad",
           location: "Primeros años",
           description:
-            "Mi papá tenía un negocio de repuestos y reparación de computadoras—armaba equipos y cambiaba componentes para clientes. Yo lo veía trabajar, copiaba lo que hacía, y no tardé en estar armando PCs a medida para clientes yo mismo, desde muy pequeño. Esa base práctica—hardware antes que software, sistemas antes que código—es lo que hace que el lado técnico se sienta natural hoy.",
+            "Mi papá tenía un negocio de repuestos y reparación de computadoras. Armaba equipos para clientes y arreglaba lo que se dañaba. Yo lo veía, copiaba lo que hacía, y al poco tiempo ya armaba PCs a medida para clientes también. Era chico. Ahí empezó lo del hardware. Hardware antes que software, sistemas antes que código. El lado técnico siempre me ha salido natural.",
           tags: ["Hardware", "Armado de PCs", "Autodidacta", "Curiosidad"],
           accent: "#6B6B6B",
           type: "education" as const,
           image: "/IMG_4131.JPG",
-          imageAlt: "Vistiendo traje de constructor—builder desde la raíz",
+          imageAlt: "De pequeño con traje de constructor. Builder desde el inicio.",
           imagePosition: "50% 15%",
           icon: "builder" as const,
         },
@@ -839,6 +883,7 @@ export const translations = {
       viewLive: "Ver en vivo",
       code: "Código",
       problem: "El problema",
+      howItWorks: "Cómo funciona el sistema",
       features: "Funciones clave",
       techStack: "Stack tecnológico",
       architecture: "Arquitectura",
@@ -855,6 +900,51 @@ export const translations = {
       openProductionUrl: "Abrir URL de producción →",
       iframeBlocked: "Si no carga, el sitio puede bloquear iframes.",
       openInNewTab: "abrir en nueva pestaña",
+    },
+    ragWorkflow: {
+      nodes: [
+        {
+          type: "trigger",
+          typeLabel: "Disparador",
+          title: "Pregunta del usuario",
+          description:
+            "El comprador pregunta sobre condiciones, exclusiones o qué plan",
+        },
+        {
+          type: "condition",
+          typeLabel: "Condición",
+          title: "Ruta",
+          description:
+            "Ruta simple (precio) frente a RAG completo cuando se necesita lenguaje de póliza",
+        },
+        {
+          type: "action",
+          typeLabel: "Acción",
+          title: "Búsqueda vectorial",
+          description:
+            "Búsqueda semántica en documentos aprobados por la aseguradora integrados",
+        },
+        {
+          type: "action",
+          typeLabel: "Acción",
+          title: "Recuperar fragmentos",
+          description: "Obtener fragmentos de póliza relevantes de Postgres",
+        },
+        {
+          type: "action",
+          typeLabel: "Acción",
+          title: "Generación por LLM",
+          description:
+            "Respuesta con contexto, modelos insignia (OpenAI, Anthropic)",
+        },
+        {
+          type: "action",
+          typeLabel: "Acción",
+          title: "Salida + CRM",
+          description:
+            "Respuesta estructurada a la UI, sincronización con el registro de contacto",
+        },
+      ],
     },
   },
 };
