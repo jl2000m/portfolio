@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { GraduationCap } from "lucide-react";
+import { GraduationCap, HardHat } from "lucide-react";
 import Image from "next/image";
 
 export interface TimelineItem {
@@ -16,6 +16,7 @@ export interface TimelineItem {
   image?: string;
   imageAlt?: string;
   imagePosition?: "top" | "center" | "bottom" | string;
+  icon?: "graduation" | "builder";
 }
 
 interface TimelineProps {
@@ -45,7 +46,11 @@ export default function Timeline({ items }: TimelineProps) {
                   className="absolute left-[9px] md:left-[17px] top-1.5 w-5 h-5 rounded-full border-2 border-white flex items-center justify-center"
                   style={{ backgroundColor: item.accent || "#9d7cf0" }}
                 >
-                  <GraduationCap size={10} className="text-white" />
+                  {item.icon === "builder" ? (
+                    <HardHat size={10} className="text-white" />
+                  ) : (
+                    <GraduationCap size={10} className="text-white" />
+                  )}
                 </div>
               ) : (
                 <div
