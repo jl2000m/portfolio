@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #ffffff;
+  --surface: #f7f7f5;
+  --fg: #1a1a1a;
+  --muted: #6b6b6b;
+  --accent: #0066ff;
+  --accent-hover: #0052cc;
+  --accent-light: #ebf2ff;
+  --border: #e5e5e3;
+  --border-hover: #d1d1cf;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--bg);
+  color: var(--fg);
+}
+
+/* Hero subtle gradient — keeps it light but not flat */
+.hero-gradient {
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(ellipse 70% 50% at 70% -10%, rgba(0, 102, 255, 0.06), transparent),
+    radial-gradient(ellipse 50% 40% at 0% 60%, rgba(0, 102, 255, 0.03), transparent);
+}
+
+/* Card panel */
+.surface-panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: #d1d1cf;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b0b0ae;
+}
+
+::selection {
+  background-color: rgba(0, 102, 255, 0.15);
+  color: var(--fg);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:focus-visible {
+  outline: 2px solid rgba(0, 102, 255, 0.4);
+  outline-offset: 2px;
+}
+
+/* Faro pitch pages — keep dark for those specific pages */
+.faro-pitch-hero-bg {
+  background-color: #0b0b12;
+  background-image:
+    radial-gradient(ellipse 100% 80% at 50% -30%, rgba(201, 169, 98, 0.14), transparent 55%),
+    radial-gradient(ellipse 70% 50% at 10% 60%, rgba(91, 141, 238, 0.12), transparent 50%),
+    radial-gradient(ellipse 60% 45% at 95% 20%, rgba(157, 124, 240, 0.1), transparent 45%),
+    radial-gradient(ellipse 50% 40% at 80% 90%, rgba(62, 207, 142, 0.06), transparent 40%);
+}
+
+.faro-pitch-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 72px 72px;
+  mask-image: radial-gradient(ellipse 85% 70% at 50% 15%, black 20%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse 85% 70% at 50% 15%, black 20%, transparent 70%);
+}
+
+.faro-pitch-noise {
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@keyframes faro-ring-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.faro-gold-ring {
+  background: linear-gradient(
+    135deg,
+    rgba(201, 169, 98, 0.45),
+    rgba(255, 255, 255, 0.12),
+    rgba(91, 141, 238, 0.35),
+    rgba(201, 169, 98, 0.35)
+  );
+  background-size: 200% 200%;
+  animation: faro-ring-shift 8s ease-in-out infinite;
+}
+
+.faro-browser-inner-shadow {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    inset 0 -40px 80px -20px rgba(0, 0, 0, 0.55);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faro-gold-ring { animation: none; }
+}
