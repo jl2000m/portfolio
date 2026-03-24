@@ -43,7 +43,7 @@ export const projects: Project[] = [
       "Jira",
     ],
     description:
-      "Owned the launch and growth of Panama's first multiproduct digital insurance e-commerce platform as Product Owner and Commercial Lead. Not the dev. The person who defined what got built, why, and how it performed commercially. +200% YoY growth, $1.7M+ in digital sales.",
+      "Owned the launch and growth of Panama's first multiproduct digital insurance e-commerce platform as Product Owner and Commercial Lead. Not the dev. The person who defined what got built, why, and how it performed commercially. +200% YoY growth, more than $2M in digital sales.",
     problem:
       "SURA needed Panama's first multiproduct digital insurance channel built from scratch. No local playbook existed. My job was to define the product vision, align the dev team around it, and make it grow commercially in a market that had never bought insurance online.",
     features: [

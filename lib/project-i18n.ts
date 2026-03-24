@@ -39,7 +39,7 @@ const PROJECT_COPY_ES: Record<string, ProjectCopyEs> = {
   "sura-ecommerce": {
     tagline: "La primera plataforma digital multiproducto de seguros de Panamá.",
     description:
-      "Lideré el lanzamiento y el crecimiento del primer e-commerce multiproducto de seguros de Panamá como Product Owner y líder comercial. No como dev: como quien definió qué construir, por qué y cómo rendía comercialmente. +200% YoY, más de $1.7M en ventas digitales.",
+      "Lideré el lanzamiento y el crecimiento del primer e-commerce multiproducto de seguros de Panamá como Product Owner y líder comercial. No como dev: como quien definió qué construir, por qué y cómo rendía comercialmente. +200% YoY, más de $2M en ventas digitales.",
     problem:
       "SURA necesitaba el primer canal digital multiproducto de seguros de Panamá desde cero. No existía playbook local. Mi trabajo fue definir la visión de producto, alinear al equipo de desarrollo y hacerlo crecer comercialmente en un mercado que nunca había comprado seguros online.",
     features: [

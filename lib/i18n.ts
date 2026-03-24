@@ -1,3 +1,5 @@
+import { faroPageEn, faroPageEs } from "./i18n-faro";
+
 export const translations = {
   en: {
     nav: {
@@ -12,14 +14,14 @@ export const translations = {
       line1: "I build digital systems",
       line2: "that grow revenue.",
       subhead:
-        "From strategy to launch. Landing pages, e-commerce platforms, automations, AI pipelines. Backed by 7+ years driving $2M+ in digital sales.",
+        "From strategy to launch. Landing pages, e-commerce platforms, automations, AI pipelines. Backed by 7+ years driving more than $2M in digital sales.",
       ctaPrimary: "See my work",
       ctaSecondary: "Book a call",
       context: "Context",
     },
     stats: [
       { value: "+200%", label: "YoY digital channel growth" },
-      { value: "$2M+", label: "Digital channel sales" },
+      { value: "$2M+", label: "More than $2M digital sales" },
       { value: "400%", label: "Sales goal attained (SURA)" },
       { value: "25+", label: "APIs integrated" },
       { value: "5k+", label: "Monthly leads generated" },
@@ -158,6 +160,32 @@ export const translations = {
       rights: "© 2026 José Martínez. All rights reserved.",
       built: "Built with Next.js & Tailwind",
     },
+    socialBio: {
+      metaTitle: "Links",
+      metaDescription:
+        "José | AI & Growth — digital products, AI, e-commerce. Links to resources, book a call, and more.",
+      displayName: "José | AI & Growth",
+      handle: "@josem.crea",
+      bioLines: [
+        "🛠️ I build digital products and systems",
+        "🤖 AI + e-commerce + growth",
+        "📦 Real cases, frameworks, and experiments",
+        "Based in Panama 🇵🇦",
+      ],
+      sectionPrimary: "Start here",
+      sectionWork: "Work & book",
+      sectionSocial: "Social",
+      sectionSite: "Website",
+      links: {
+        portfolio: "Portfolio & projects",
+        linkedin: "Let's connect on LinkedIn",
+        calendly: "Book a call (Calendly)",
+        email: "Email",
+        instagram: "Instagram",
+        tiktok: "TikTok",
+        resources: "Resources & articles",
+      },
+    },
     projectsPage: {
       label: "Projects",
       title: "What I've",
@@ -248,7 +276,7 @@ export const translations = {
       ctaButton: "Book a 15-min call",
       bio: [
         "I've been building things since before I knew what \"software\" meant. Assembled my first PC at 6, built hobby websites as a teenager, and eventually turned that curiosity into a career. I started Software Engineering at UTP in 2017, dropped out after two years, and pivoted to Digital Business. Not because I lost interest in technology. Because I realized I wanted to connect it to real commercial problems.",
-        "Since 2019 I've been in the digital industry. Seven years learning how businesses actually grow. Most of that time at Seguros SURA, where I led Panama's first multiproduct digital insurance platform, growing it +200% YoY and managing $1.7M+ in digital sales.",
+        "Since 2019 I've been in the digital industry. Seven years learning how businesses actually grow. Most of that time at Seguros SURA, where I led Panama's first multiproduct digital insurance platform, growing it +200% YoY and managing more than $2M in digital sales.",
         "Today I work at Astro Asistencias, a startup where I was the first hire and lead digital sales while also building product. On the side I ship my own projects: Birriapp, Reggi. I share what I learn on Instagram and TikTok (@josem.crea) in Spanish, for the LatAm builder community.",
       ],
       timeline: [
@@ -268,7 +296,7 @@ export const translations = {
           company: "Seguros SURA",
           location: "Panama",
           description:
-            "Led the launch and growth of Panama's first multiproduct digital insurance platform. Drove +200% YoY growth and managed $1.7M+ in digital channel sales. Built and managed a 4-member team generating 5k+ monthly leads, cutting CPL by 50% between 2023 and 2024. Owned the roadmap, analytics, and commercial strategy end-to-end.",
+            "Led the launch and growth of Panama's first multiproduct digital insurance platform. Drove +200% YoY growth and managed more than $2M in digital channel sales. Built and managed a 4-member team generating 5k+ monthly leads, cutting CPL by 50% between 2023 and 2024. Owned the roadmap, analytics, and commercial strategy end-to-end.",
           tags: ["E-commerce", "Product Owner", "Performance Media", "CRO", "Analytics"],
           accent: "#3ecf8e",
         },
@@ -309,12 +337,29 @@ export const translations = {
     },
     resourcesPage: {
       label: "Resources",
-      title: "How I use AI every day: my real tools and workflows",
+      title: "Resources",
       subtitle:
-        "One living page on Notion—tools, prompts, and flows I actually use, not a generic stack list.",
-      openExternal: "Open in Notion",
-      openUrl: "https://josemcrea.notion.site/cca1637591a84b38bea1297c959ef9cf",
+        "Long-form notes and articles I publish on Notion and LinkedIn.",
+      notion: {
+        title: "How I use AI every day: my real tools and workflows",
+        description:
+          "One living page on Notion—tools, prompts, and flows I actually use, not a generic stack list.",
+        openExternal: "Open in Notion",
+        openUrl: "https://josemcrea.notion.site/cca1637591a84b38bea1297c959ef9cf",
+        imageAlt: "Notion page preview: daily AI tools and workflows",
+      },
+      merkappArticle: {
+        title: "The best online supermarket experience I've had",
+        description:
+          "A walkthrough of search that understands intent, predictive results, frictionless cart actions, clear delivery windows, substitution preferences, local payment options, and WhatsApp updates—why UX was the real product.",
+        openExternal: "Read on LinkedIn",
+        openUrl:
+          "https://www.linkedin.com/pulse/la-mejor-experiencia-de-supermercado-online-que-he-tenido-mart%C3%ADnez-ygqke/",
+        imageAlt:
+          "LinkedIn article: Merkapp delivery van and headline about online grocery UX",
+      },
     },
+    faroPage: faroPageEn,
     projectStatus: {
       active: "Active",
       shipped: "Shipped",
@@ -329,6 +374,7 @@ export const translations = {
     },
     projectDetail: {
       back: "Projects",
+      backFromFaro: "F·A·R·O· page",
       viewLive: "View live",
       code: "Code",
       problem: "The problem",
@@ -364,14 +410,14 @@ export const translations = {
       line1: "Construyo sistemas digitales",
       line2: "que generan resultados.",
       subhead:
-        "De la estrategia al lanzamiento. Landing pages, plataformas de e-commerce, automatizaciones y pipelines de IA. Respaldado por 7+ años generando $2M+ en ventas digitales.",
+        "De la estrategia al lanzamiento. Landing pages, plataformas de e-commerce, automatizaciones y pipelines de IA. Respaldado por 7+ años generando más de $2M en ventas digitales.",
       ctaPrimary: "Ver mi trabajo",
       ctaSecondary: "Agenda una llamada",
       context: "Contexto",
     },
     stats: [
       { value: "+200%", label: "Crecimiento YoY canal digital" },
-      { value: "$2M+", label: "Ventas en canal digital" },
+      { value: "$2M+", label: "Más de $2M en ventas digitales" },
       { value: "400%", label: "Cumplimiento de meta (SURA)" },
       { value: "25+", label: "APIs integradas" },
       { value: "5k+", label: "Leads mensuales generados" },
@@ -511,6 +557,32 @@ export const translations = {
       rights: "© 2026 José Martínez. Todos los derechos reservados.",
       built: "Construido con Next.js y Tailwind",
     },
+    socialBio: {
+      metaTitle: "Enlaces",
+      metaDescription:
+        "José | IA & Growth — productos digitales, IA, e-commerce. Enlaces a recursos, agenda y más.",
+      displayName: "José | IA & Growth",
+      handle: "@josem.crea",
+      bioLines: [
+        "🛠️ Construyo productos y sistemas digitales",
+        "🤖 IA + e-commerce + growth",
+        "📦 Casos reales, frameworks y experimentos",
+        "Basado en Panamá 🇵🇦",
+      ],
+      sectionPrimary: "Empieza aquí",
+      sectionWork: "Trabajo y agenda",
+      sectionSocial: "Redes",
+      sectionSite: "Sitio web",
+      links: {
+        portfolio: "Portafolio y proyectos",
+        linkedin: "Conectemos en LinkedIn",
+        calendly: "Agendar llamada (Calendly)",
+        email: "Correo",
+        instagram: "Instagram",
+        tiktok: "TikTok",
+        resources: "Recursos y artículos",
+      },
+    },
     projectsPage: {
       label: "Proyectos",
       title: "Lo que he",
@@ -601,7 +673,7 @@ export const translations = {
       ctaButton: "Agenda una llamada de 15 min",
       bio: [
         "He estado construyendo cosas desde antes de saber qué significaba \"software\". Armé mi primera PC a los 6 años, construí sitios web por hobby de adolescente, y eventualmente convertí esa curiosidad en una carrera. Empecé Ingeniería en Sistemas en la UTP en 2017, la dejé después de dos años y me pasé a Negocios Digitales. No porque perdí el interés en la tecnología. Sino porque me di cuenta de que quería conectarla con problemas comerciales reales.",
-        "Desde 2019 estoy en la industria digital. Siete años aprendiendo cómo crecen los negocios de verdad. La mayor parte de ese tiempo en Seguros SURA, donde lideré la primera plataforma digital multiproducto de seguros en Panamá, haciéndola crecer +200% YoY y gestionando $1.7M+ en ventas digitales.",
+        "Desde 2019 estoy en la industria digital. Siete años aprendiendo cómo crecen los negocios de verdad. La mayor parte de ese tiempo en Seguros SURA, donde lideré la primera plataforma digital multiproducto de seguros en Panamá, haciéndola crecer +200% YoY y gestionando más de $2M en ventas digitales.",
         "Hoy trabajo en Astro Asistencias, una startup donde fui la primera contratación y lidero ventas digitales mientras también construyo producto. En paralelo lanzo mis propios proyectos: Birriapp, Reggi. Comparto lo que aprendo en Instagram y TikTok (@josem.crea) en español, para la comunidad de builders de LatAm.",
       ],
       timeline: [
@@ -627,7 +699,7 @@ export const translations = {
           company: "Seguros SURA",
           location: "Panamá",
           description:
-            "Lideré el lanzamiento y el crecimiento de la primera plataforma digital multiproducto de seguros de Panamá. +200% YoY y más de $1.7M en ventas del canal digital. Organicé un equipo de 4 personas que generaba más de 5k leads mensuales, reduciendo el CPL un 50% entre 2023 y 2024. Dueño del roadmap, analítica y estrategia comercial de punta a punta.",
+            "Lideré el lanzamiento y el crecimiento de la primera plataforma digital multiproducto de seguros de Panamá. +200% YoY y más de $2M en ventas del canal digital. Organicé un equipo de 4 personas que generaba más de 5k leads mensuales, reduciendo el CPL un 50% entre 2023 y 2024. Dueño del roadmap, analítica y estrategia comercial de punta a punta.",
           tags: [
             "E-commerce",
             "Product Owner",
@@ -674,13 +746,31 @@ export const translations = {
     },
     resourcesPage: {
       label: "Recursos",
-      title:
-        "Cómo uso IA todos los días, mi lista real de herramientas y flujos",
+      title: "Recursos",
       subtitle:
-        "Una sola página viva en Notion: herramientas, prompts y flujos que uso de verdad, no una lista genérica de stack.",
-      openExternal: "Abrir en Notion",
-      openUrl: "https://josemcrea.notion.site/cca1637591a84b38bea1297c959ef9cf",
+        "Notas largas y artículos que publico en Notion y LinkedIn.",
+      notion: {
+        title:
+          "Cómo uso IA todos los días, mi lista real de herramientas y flujos",
+        description:
+          "Una sola página viva en Notion: herramientas, prompts y flujos que uso de verdad, no una lista genérica de stack.",
+        openExternal: "Abrir en Notion",
+        openUrl: "https://josemcrea.notion.site/cca1637591a84b38bea1297c959ef9cf",
+        imageAlt:
+          "Vista previa de la página en Notion sobre herramientas y flujos de IA",
+      },
+      merkappArticle: {
+        title: "La mejor experiencia de supermercado online que he tenido",
+        description:
+          "Un recorrido por el buscador que entiende intención, resultados predictivos, carrito sin fricción, ventanas de entrega claras, preferencias de sustitución, métodos de pago locales y avisos por WhatsApp: por qué la UX fue el producto.",
+        openExternal: "Leer en LinkedIn",
+        openUrl:
+          "https://www.linkedin.com/pulse/la-mejor-experiencia-de-supermercado-online-que-he-tenido-mart%C3%ADnez-ygqke/",
+        imageAlt:
+          "Artículo en LinkedIn: furgón de Merkapp y titular sobre UX de supermercado online",
+      },
     },
+    faroPage: faroPageEs,
     projectStatus: {
       active: "Activo",
       shipped: "Entregado",
@@ -695,6 +785,7 @@ export const translations = {
     },
     projectDetail: {
       back: "Proyectos",
+      backFromFaro: "Página F·A·R·O·",
       viewLive: "Ver en vivo",
       code: "Código",
       problem: "El problema",

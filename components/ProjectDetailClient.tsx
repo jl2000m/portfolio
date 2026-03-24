@@ -22,16 +22,22 @@ interface ProjectDetailClientProps {
   project: Project;
   prev: Project | null;
   next: Project | null;
+  /** When true, back link returns to the private F·A·R·O· proposal page. */
+  backFromFaro?: boolean;
 }
 
 export function ProjectDetailClient({
   project,
   prev,
   next,
+  backFromFaro = false,
 }: ProjectDetailClientProps) {
   const { lang } = useLang();
   const t = useT();
   const d = t.projectDetail;
+  const backHref = backFromFaro ? "/faro-consultancy" : "/projects";
+  const backLabel = backFromFaro ? d.backFromFaro : d.back;
+  const projectNavSuffix = backFromFaro ? "?from=faro" : "";
   const p = localizeProject(project, lang);
   const prevL = prev ? localizeProject(prev, lang) : null;
   const nextL = next ? localizeProject(next, lang) : null;
@@ -42,11 +48,11 @@ export function ProjectDetailClient({
         <div className="max-w-5xl mx-auto px-6 py-14 md:py-20 space-y-10 md:space-y-12">
           <div>
             <Link
-              href="/projects"
+              href={backHref}
               className="inline-flex items-center gap-2 text-sm text-muted hover:text-fg transition-colors mb-8"
             >
               <ArrowLeft size={14} />
-              {d.back}
+              {backLabel}
             </Link>
 
             <div className="flex flex-wrap items-center gap-2 mb-5">
@@ -221,7 +227,7 @@ export function ProjectDetailClient({
         <div className="max-w-4xl mx-auto px-6 py-8 flex justify-between gap-4">
           {prev && prevL ? (
             <Link
-              href={`/projects/${prev.slug}`}
+              href={`/projects/${prev.slug}${projectNavSuffix}`}
               className="flex items-center gap-3 group text-left"
             >
               <ArrowLeft
@@ -240,7 +246,7 @@ export function ProjectDetailClient({
           )}
           {next && nextL ? (
             <Link
-              href={`/projects/${next.slug}`}
+              href={`/projects/${next.slug}${projectNavSuffix}`}
               className="flex items-center gap-3 group text-right ml-auto"
             >
               <div>

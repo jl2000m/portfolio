@@ -9,7 +9,7 @@ export default function StatStrip() {
 
   return (
     <div className="border-y border-border bg-surface overflow-hidden py-4">
-      <div className="flex animate-marquee gap-0 whitespace-nowrap">
+      <div className="flex animate-marquee gap-0 whitespace-nowrap motion-reduce:animate-none">
         {items.map((stat, i) => (
           <div
             key={i}

@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -14,12 +13,8 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto px-6 py-12 md:py-16 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_380px] gap-14 lg:gap-20 items-center">
 
-          {/* Left — copy */}
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-          >
+          {/* Left — copy (no entrance opacity animation — improves LCP vs framer-motion initial hidden state) */}
+          <div>
             {/* Available badge */}
             <div className="inline-flex items-center gap-2 mb-8 px-3 py-1.5 rounded-full border border-border bg-surface text-sm font-medium text-muted">
               <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
@@ -52,14 +47,10 @@ export default function Hero() {
                 {t.hero.ctaSecondary}
               </a>
             </div>
-          </motion.div>
+          </div>
 
           {/* Right — unified photo + stats card */}
-          <motion.aside
-            initial={{ opacity: 0, y: 32 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-          >
+          <aside>
             <div className="rounded-2xl overflow-hidden border border-border">
               {/* Photo */}
               <div className="relative aspect-[4/3.6]"
@@ -74,11 +65,13 @@ export default function Hero() {
                 <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-48 h-48 rounded-full opacity-20"
                   style={{ background: "radial-gradient(circle, #0066FF 0%, transparent 70%)" }} />
                 <Image
-                  src="/Gemini_Generated_Image_d5w4rld5w4rld5w4.png"
+                  src="/hero.webp"
                   alt="José Martínez"
                   fill
                   className="object-cover object-top"
+                  sizes="(max-width: 1024px) 100vw, 380px"
                   priority
+                  fetchPriority="high"
                 />
                 {/* Name tag */}
                 <div className="absolute bottom-4 left-4 right-4">
@@ -108,7 +101,7 @@ export default function Hero() {
                 </div>
               </div>
             </div>
-          </motion.aside>
+          </aside>
         </div>
       </div>
     </section>

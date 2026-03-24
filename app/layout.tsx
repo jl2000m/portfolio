@@ -3,15 +3,22 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
 
+/** Production site URL (Vercel) — used for OG tags, canonical, and absolute asset URLs */
+const SITE_URL = "https://jmcrea.vercel.app";
+
+/** Variable font: one network request, full weight range for Tailwind utilities */
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
   variable: "--font-jakarta",
   display: "swap",
+  adjustFontFallback: true,
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://josemartinez.dev"),
+  metadataBase: new URL(SITE_URL),
+  alternates: {
+    canonical: SITE_URL,
+  },
   title: {
     default: "José Martínez — Digital Systems that Grow Revenue",
     template: "%s | José Martínez",
@@ -34,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://josemartinez.dev",
+    url: SITE_URL,
     siteName: "José Martínez",
     title: "José Martínez — Digital Systems that Grow Revenue",
     description:

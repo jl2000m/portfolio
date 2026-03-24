@@ -1,6 +1,6 @@
 "use client";
 
-import { useT } from "@/context/LanguageContext";
+import { useLang, useT } from "@/context/LanguageContext";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Timeline from "@/components/Timeline";
@@ -45,16 +45,21 @@ export function AboutTimeline() {
 
 export function AboutBio() {
   const t = useT();
+  const { lang } = useLang();
   const bio = t.aboutPage.bio;
+  const moneyHighlight = lang === "en" ? "more than $2M" : "más de $2M";
+  const afterGrowth = bio[1].split("+200% YoY")[1] ?? "";
+  const beforeMoney = afterGrowth.split(moneyHighlight)[0] ?? "";
+  const afterMoney = afterGrowth.split(moneyHighlight)[1] ?? "";
   return (
     <div className="space-y-4 max-w-2xl">
       <p className="text-muted leading-relaxed text-lg">{bio[0]}</p>
       <p className="text-muted leading-relaxed">
         {bio[1].split("+200% YoY")[0]}
         <span className="text-fg font-semibold">+200% YoY</span>
-        {bio[1].split("+200% YoY")[1]?.split("$1.7M+")[0]}
-        <span className="text-fg font-semibold">$1.7M+</span>
-        {bio[1].split("$1.7M+")[1]}
+        {beforeMoney}
+        <span className="text-fg font-semibold">{moneyHighlight}</span>
+        {afterMoney}
       </p>
       <p className="text-muted leading-relaxed">{bio[2]}</p>
     </div>

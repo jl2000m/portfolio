@@ -11,6 +11,14 @@ import {
 
 interface Props {
   params: Promise<{ slug: string }>;
+  searchParams?: Promise<{ from?: string | string[] }> | { from?: string | string[] };
+}
+
+function firstQueryValue(
+  v: string | string[] | undefined,
+): string | undefined {
+  if (v == null) return undefined;
+  return Array.isArray(v) ? v[0] : v;
 }
 
 export async function generateStaticParams() {
@@ -27,18 +35,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function ProjectPage({ params }: Props) {
+export default async function ProjectPage({ params, searchParams }: Props) {
   const { slug } = await params;
   const project = getProjectBySlug(slug);
   if (!project) notFound();
 
   const { prev, next } = getAdjacentProjects(slug);
 
+  const sp = await Promise.resolve(searchParams ?? {});
+  const backFromFaro = firstQueryValue(sp.from) === "faro";
+
   return (
     <>
       <Nav />
       <main className="pt-24">
-        <ProjectDetailClient project={project} prev={prev} next={next} />
+        <ProjectDetailClient
+          project={project}
+          prev={prev}
+          next={next}
+          backFromFaro={backFromFaro}
+        />
       </main>
       <Footer />
     </>

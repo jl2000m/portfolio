@@ -203,7 +203,7 @@ export default function IntegrationsSection() {
   const [showAllCards, setShowAllCards] = useState(false);
 
   return (
-    <section className="border-t border-border">
+    <section id="integrations" className="border-t border-border scroll-mt-24">
       <div className="max-w-6xl mx-auto px-6 py-24">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
