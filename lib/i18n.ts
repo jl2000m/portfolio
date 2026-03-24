@@ -300,6 +300,9 @@ export const translations = {
             "Astro is a startup and I was the company's first hire. I lead digital sales strategy and growth while also building product: landing pages, integrations, automation flows, and the digital sales funnel from scratch.",
           tags: ["Digital Sales", "Growth", "InsurTech", "Product", "Performance Media"],
           accent: "#0066FF",
+          image: "/IMG_0123.jpg",
+          imageAlt: "At Astro Asistencias",
+          imagePosition: "50% 40%",
         },
         {
           year: "Sep 2019 · Oct 2025",
@@ -310,6 +313,8 @@ export const translations = {
             "Led the launch and growth of Panama's first multiproduct digital insurance platform. Drove +200% YoY growth and managed more than $2M in digital channel sales. Built and managed a 4-member team generating 5k+ monthly leads, cutting CPL by 50% between 2023 and 2024. Owned the roadmap, analytics, and commercial strategy end-to-end.",
           tags: ["E-commerce", "Product Owner", "Performance Media", "CRO", "Analytics"],
           accent: "#3ecf8e",
+          image: "/about/sura-speech.jpg",
+          imageAlt: "Giving a speech at SURA about methods of integration with digital channels",
         },
         {
           year: "2024 · Expected 2028",
@@ -328,10 +333,13 @@ export const translations = {
           company: "UTP · Universidad Tecnológica de Panamá",
           location: "Panama City",
           description:
-            "Two years into a CS degree before I realized I wanted to connect technology to real business problems, not just study it in abstract. Dropped out and shifted to Digital Business. Those two years gave me a foundation in systems thinking that still informs how I build today.",
+            "Two years into a CS degree at UTP (Universidad Tecnológica de Panamá), Panama's top university for engineering. I realized I wanted to connect technology to real business problems, not just study it in abstract. Dropped out and shifted to Digital Business. Those two years gave me a foundation in systems thinking that still informs how I build today.",
           tags: ["Computer Science", "Programming", "Systems Thinking"],
           accent: "#9d7cf0",
           type: "education" as const,
+          image: "/20190603_110856.jpg",
+          imageAlt: "Studying at UTP (Universidad Tecnológica de Panamá)",
+          imagePosition: "50% 29%",
         },
         {
           year: "Age 6 onwards",
@@ -339,8 +347,8 @@ export const translations = {
           company: "Hobby and curiosity",
           location: "Early years",
           description:
-            "Built and upgraded PCs as a kid, made websites as a teenager just for fun. The curiosity for how things work technically has always been there, long before it became a career. That foundation is what makes the technical side feel natural today.",
-          tags: ["Hardware", "Web", "Self-taught", "Curiosity"],
+            "My dad owned a computer parts and repair shop—he assembled systems and swapped components for customers. I'd watch him work, copy what he did, and before long I was building custom PCs for customers myself, from a very young age. That hands-on foundation—hardware before software, systems before code—is what makes the technical side feel natural today.",
+          tags: ["Hardware", "PC building", "Self-taught", "Curiosity"],
           accent: "#6B6B6B",
           type: "education" as const,
         },
@@ -714,6 +722,9 @@ export const translations = {
             "Medios de performance",
           ],
           accent: "#0066FF",
+          image: "/IMG_0123.jpg",
+          imageAlt: "En Astro Asistencias",
+          imagePosition: "50% 40%",
         },
         {
           year: "Sep 2019 · Oct 2025",
@@ -730,6 +741,8 @@ export const translations = {
             "Analítica",
           ],
           accent: "#3ecf8e",
+          image: "/about/sura-speech.jpg",
+          imageAlt: "Dando una charla en SURA sobre métodos de integración con canales digitales",
         },
         {
           year: "2024 · Graduación prevista 2028",
@@ -748,10 +761,13 @@ export const translations = {
           company: "UTP · Universidad Tecnológica de Panamá",
           location: "Ciudad de Panamá",
           description:
-            "Dos años de carrera en sistemas antes de darme cuenta de que quería conectar la tecnología con problemas de negocio reales, no solo estudiarla en abstracto. Dejé la carrera y me pasé a Negocios Digitales. Esos dos años me dieron una base de pensamiento en sistemas que todavía guía cómo construyo.",
+            "Dos años de carrera en sistemas en la UTP (Universidad Tecnológica de Panamá), la principal universidad de ingeniería del país. Me di cuenta de que quería conectar la tecnología con problemas de negocio reales, no solo estudiarla en abstracto. Dejé la carrera y me pasé a Negocios Digitales. Esos dos años me dieron una base de pensamiento en sistemas que todavía guía cómo construyo.",
           tags: ["Ingeniería de sistemas", "Programación", "Pensamiento sistémico"],
           accent: "#9d7cf0",
           type: "education" as const,
+          image: "/20190603_110856.jpg",
+          imageAlt: "Estudiando en la UTP (Universidad Tecnológica de Panamá)",
+          imagePosition: "50% 29%",
         },
         {
           year: "Desde los 6 años",
@@ -759,8 +775,8 @@ export const translations = {
           company: "Hobby y curiosidad",
           location: "Primeros años",
           description:
-            "Armé y mejoré PCs de niño, hice sitios web de adolescente por hobby. La curiosidad por cómo funcionan las cosas a nivel técnico siempre estuvo ahí, mucho antes de que fuera una carrera. Esa base es lo que hace que el lado técnico se sienta natural hoy.",
-          tags: ["Hardware", "Web", "Autodidacta", "Curiosidad"],
+            "Mi papá tenía un negocio de repuestos y reparación de computadoras—armaba equipos y cambiaba componentes para clientes. Yo lo veía trabajar, copiaba lo que hacía, y no tardé en estar armando PCs a medida para clientes yo mismo, desde muy pequeño. Esa base práctica—hardware antes que software, sistemas antes que código—es lo que hace que el lado técnico se sienta natural hoy.",
+          tags: ["Hardware", "Armado de PCs", "Autodidacta", "Curiosidad"],
           accent: "#6B6B6B",
           type: "education" as const,
         },

@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { GraduationCap } from "lucide-react";
+import Image from "next/image";
 
 export interface TimelineItem {
   year: string;
@@ -12,6 +13,9 @@ export interface TimelineItem {
   tags: string[];
   accent?: string;
   type?: "work" | "education";
+  image?: string;
+  imageAlt?: string;
+  imagePosition?: "top" | "center" | "bottom" | string;
 }
 
 interface TimelineProps {
@@ -58,23 +62,51 @@ export default function Timeline({ items }: TimelineProps) {
               </span>
 
               <div
-                className={`border rounded-xl p-5 transition-colors ${
+                className={`border rounded-xl overflow-hidden transition-colors ${
                   isEducation
                     ? "border-border bg-surface hover:border-border-hover"
                     : "border-border bg-white hover:border-border-hover hover:bg-surface"
                 }`}
               >
-                <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
-                  <div>
-                    <h3 className="font-jakarta font-bold text-fg">{item.role}</h3>
-                    <span className="text-sm text-muted">
-                      {item.company} · {item.location}
-                    </span>
+                <div className="p-5">
+                  <div className="flex flex-wrap items-start justify-between gap-2 mb-2">
+                    <div>
+                      <h3 className="font-jakarta font-bold text-fg">{item.role}</h3>
+                      <span className="text-sm text-muted">
+                        {item.company} · {item.location}
+                      </span>
+                    </div>
                   </div>
+                  <p className="text-sm text-muted leading-relaxed mb-3">
+                    {item.description}
+                  </p>
                 </div>
-                <p className="text-sm text-muted leading-relaxed mb-3">
-                  {item.description}
-                </p>
+                {item.image && (
+                  <div className="relative w-full aspect-video bg-surface">
+                    <Image
+                      src={item.image}
+                      alt={item.imageAlt ?? ""}
+                      fill
+                      className={`object-cover ${
+                        item.imagePosition === "top"
+                          ? "object-top"
+                          : item.imagePosition === "bottom"
+                            ? "object-bottom"
+                            : ["top", "center", "bottom"].includes(item.imagePosition ?? "")
+                              ? "object-center"
+                              : ""
+                      }`}
+                      style={
+                        item.imagePosition &&
+                        !["top", "center", "bottom"].includes(item.imagePosition)
+                          ? { objectPosition: item.imagePosition }
+                          : undefined
+                      }
+                      sizes="(max-width: 768px) 100vw, 480px"
+                    />
+                  </div>
+                )}
+                <div className={item.image ? "px-5 pb-5 pt-3" : "p-5 pt-0"}>
                 {item.tags.length > 0 && (
                   <div className="flex flex-wrap gap-1.5">
                     {item.tags.map((tag) => (
@@ -87,6 +119,7 @@ export default function Timeline({ items }: TimelineProps) {
                     ))}
                   </div>
                 )}
+                </div>
               </div>
             </motion.div>
           );
