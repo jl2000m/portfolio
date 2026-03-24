@@ -144,7 +144,7 @@ export const projects: Project[] = [
       "RAG earns trust on fine print. The quote JSON still wins on benefits. A MECE style rubric stops the model from lazy “cheapest wins” answers and makes trade offs explicit. Flagship models are table stakes for quality, but without production side model evaluation you are flying blind on cost and regressions. Structured outputs plus telemetry turn live traffic into the real eval set.",
     liveUrl: "https://astroasistencias.com/",
     githubUrl: null,
-    coverImage: "/projects/full-coverage-advisor.jpg",
+    coverImage: "/projects/full-coverage-advisor.png",
     previewEmbedUrl: null,
     liveUrlNote:
       "Ships inside Astro’s full coverage auto journey. Same live site, dedicated product surface.",
