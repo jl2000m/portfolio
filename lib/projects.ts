@@ -109,6 +109,47 @@ export const projects: Project[] = [
     liveUrlNote: null,
   },
   {
+    slug: "cobertura-completa-advisor",
+    name: "Full Coverage AI Advisor",
+    tagline: "Guidance grounded in RAG, flagship LLMs, and ongoing model evaluation on real quotes.",
+    status: "active",
+    accent: "#4f8cff",
+    tags: ["InsurTech", "AI", "Web"],
+    stack: [
+      "Next.js",
+      "TypeScript",
+      "Vercel AI SDK",
+      "OpenAI (flagship + embeddings)",
+      "Anthropic (flagship)",
+      "Supabase / Postgres + vector search",
+    ],
+    description:
+      "An AI assisted experience for full coverage auto at Astro Asistencias: recommendations and follow ups anchored to live quote data, with RAG over approved insurer documents when users ask about conditions, exclusions, or endorsements. Recommendations are reasoned with a MECE style frame (mutually exclusive decision dimensions that still cover what matters) so the assistant does not collapse into “always pick the cheapest.” Generation runs on flagship class models from major providers. The system is set up to evaluate those models in production, not only as a single benchmark. What the shopper sees is also stored in our CRM so the team can continue the conversation with full context.",
+    problem:
+      "Multi insurer quotes are noisy. Shoppers drown in deductibles and benefits. Generic chatbots either hedge forever or invent coverage. The product needed guidance that feels personal but respects what is on the policy page, plus a way to know which flagship model and prompt setup actually hold up under traffic.",
+    features: [
+      "MECE inspired prompting: the model scores each quoted plan on separate dimensions (for example price, benefits and limits, insurer strength, and fit to the driver and vehicle) before synthesizing, so arguments do not repeat the same idea under different names and nothing important is skipped by accident",
+      "Personalized recommendation copy and suggested next questions, driven by the live quote, not generic insurance advice",
+      "Follow up questions and answers with strict guardrails: compare only what appears in the quoted options, localized tone for Panama",
+      "RAG (retrieval augmented generation): embedded chunks from insurer approved materials, semantic search, answers scoped to the right insurer and product",
+      "Routing so simple pricing or “which plan?” stays lightweight. Full RAG path when the question needs policy language",
+      "Flagship OpenAI and Anthropic models for high stakes generation. Smaller models where a cheap routing or classification step is enough",
+      "Model evaluation in production. Consistent logging of cost, latency, and which path ran (generation vs cache vs RAG) so providers and prompts can be compared on real conversions instead of slides",
+      "Caching and rate limits so flagship usage stays fast and affordable at volume",
+      "Recommendations and follow up answers sync to our CRM on the contact or deal, so sales and ops see the same guidance the user received",
+    ],
+    architecture:
+      "Next.js APIs, Vercel AI SDK, structured outputs for the UI, RAG pipeline (embeddings + vector store in Postgres/Supabase), brokerage stack for quotes and customer context, and CRM integration so AI outputs land on the record the team works from every day.",
+    learnings:
+      "RAG earns trust on fine print. The quote JSON still wins on benefits. A MECE style rubric stops the model from lazy “cheapest wins” answers and makes trade offs explicit. Flagship models are table stakes for quality, but without production side model evaluation you are flying blind on cost and regressions. Structured outputs plus telemetry turn live traffic into the real eval set.",
+    liveUrl: "https://astroasistencias.com/",
+    githubUrl: null,
+    coverImage: "/projects/full-coverage-advisor.jpg",
+    previewEmbedUrl: null,
+    liveUrlNote:
+      "Ships inside Astro’s full coverage auto journey. Same live site, dedicated product surface.",
+  },
+  {
     slug: "birriapp",
     name: "Birriapp",
     tagline: "Coordinate matches. Collect instantly.",
@@ -288,6 +329,7 @@ export function getAdjacentProjects(slug: string): {
 export const featuredSlugs = [
   "sura-ecommerce",
   "astro-asistencias",
+  "cobertura-completa-advisor",
   "birriapp",
   "reggi",
   "excenet",
@@ -303,4 +345,5 @@ export const allTags = [
   "Growth",
   "Compliance",
   "KYC",
+  "AI",
 ];

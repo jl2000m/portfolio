@@ -89,6 +89,10 @@ function IframeBlock({
 
 export function ProjectDetailPreview({ project }: PreviewProps) {
   const m = useT().projectMedia;
+  const coverSrc =
+    typeof project.coverImage === "string" ? project.coverImage.trim() : "";
+  const hasCover = coverSrc.length > 0;
+
   if (project.previewEmbedUrl) {
     return (
       <IframeBlock
@@ -119,7 +123,42 @@ export function ProjectDetailPreview({ project }: PreviewProps) {
     );
   }
 
-  if (!project.coverImage && project.liveUrl) {
+  if (hasCover) {
+    const alt = m.screenshotOf.replace("{name}", project.name);
+    return (
+      <div className="rounded-2xl border border-border overflow-hidden shadow-sm">
+        <div className="relative aspect-[16/10] w-full bg-surface">
+          <Image
+            src={coverSrc}
+            alt={alt}
+            fill
+            className="object-cover object-top"
+            sizes="(max-width: 896px) 100vw, 896px"
+            priority
+          />
+        </div>
+        {project.liveUrlNote || project.liveUrl ? (
+          <div className="px-4 py-2.5 text-xs text-muted/70 border-t border-border space-y-1">
+            {project.liveUrlNote ? <p>{project.liveUrlNote}</p> : null}
+            {project.liveUrl ? (
+              <p>
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent hover:underline underline-offset-2"
+                >
+                  {m.openProductionUrl}
+                </a>
+              </p>
+            ) : null}
+          </div>
+        ) : null}
+      </div>
+    );
+  }
+
+  if (project.liveUrl) {
     return (
       <IframeBlock
         src={project.liveUrl}
@@ -142,22 +181,10 @@ export function ProjectDetailPreview({ project }: PreviewProps) {
     );
   }
 
-  const alt = m.screenshotOf.replace("{name}", project.name);
   return (
     <div className="rounded-2xl border border-border overflow-hidden shadow-sm">
       <div className="relative aspect-[16/10] w-full bg-surface">
-        {project.coverImage ? (
-          <Image
-            src={project.coverImage}
-            alt={alt}
-            fill
-            className="object-cover object-top"
-            sizes="(max-width: 896px) 100vw, 896px"
-            priority
-          />
-        ) : (
-          <Placeholder slug={project.slug} accent={project.accent} />
-        )}
+        <Placeholder slug={project.slug} accent={project.accent} />
       </div>
     </div>
   );
