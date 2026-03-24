@@ -148,6 +148,8 @@ export const translations = {
         "Book a free 15-min discovery call. I'll ask the right questions and you'll leave with clarity on what to build and why.",
       cta: "Book a call",
       orEmail: "Send a message",
+      aboutLink: "Want to know more first?",
+      aboutLinkTarget: "About me",
     },
     integrations: {
       label: "Integrations",
@@ -613,6 +615,8 @@ export const translations = {
         "Agenda una llamada de descubrimiento de 15 min. Yo hago las preguntas correctas y tú sales con claridad sobre qué construir y por qué.",
       cta: "Agenda una llamada",
       orEmail: "Envíame un mensaje",
+      aboutLink: "¿Quieres conocerme mejor?",
+      aboutLinkTarget: "Sobre mí",
     },
     integrations: {
       label: "Integraciones",

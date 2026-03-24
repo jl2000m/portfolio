@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Mail } from "lucide-react";
 import { useT } from "@/context/LanguageContext";
@@ -50,8 +51,18 @@ export default function BookCallSection() {
               </a>
             </div>
 
+            <p className="mt-6 text-sm text-muted">
+              {t.bookCall.aboutLink}{" "}
+              <Link
+                href="/about"
+                className="font-medium text-fg hover:underline"
+              >
+                {t.bookCall.aboutLinkTarget} →
+              </Link>
+            </p>
+
             {/* Micro-copy */}
-            <p className="mt-6 text-xs text-muted/60">
+            <p className="mt-4 text-xs text-muted/60">
               joseluis2000300@gmail.com · Panama City, Panama
             </p>
           </motion.div>
