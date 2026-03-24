@@ -140,7 +140,7 @@ export default function SocialSection() {
 
               <div className="relative rounded-2xl overflow-hidden border border-border shadow-lg" style={{ width: "325px", height: "575px" }}>
                 {/*
-                  Do not use muted=1 in the URL — TikTok locks volume and blocks unmute.
+                  Do not use muted=1 in the URL. TikTok locks volume and blocks unmute.
                   Use the official postMessage API (mute / unMute) from a user click instead.
                 */}
                 <iframe

@@ -17,6 +17,7 @@ import { useLang, useT } from "@/context/LanguageContext";
 import { getProjectBySlug, type Project } from "@/lib/projects";
 import { localizeProject } from "@/lib/project-i18n";
 import { FaroEmphasis } from "./FaroEmphasis";
+import TrustedBrandsSection from "@/components/TrustedBrandsSection";
 import { FaroStackSection } from "./FaroStackSection";
 import {
   FARO_EASE,
@@ -422,6 +423,8 @@ export function FaroPrivateView() {
           </p>
         </motion.div>
       </section>
+
+      <TrustedBrandsSection />
 
       <section className="max-w-6xl mx-auto px-6 py-20">
         <motion.div

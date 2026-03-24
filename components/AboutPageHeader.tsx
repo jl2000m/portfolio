@@ -5,6 +5,8 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Timeline from "@/components/Timeline";
 
+const ABOUT_YOUNG_TUTORIAL_VIDEO_ID = "JYrqMj34E1E";
+
 export function AboutSectionLabel({
   section,
 }: {
@@ -62,6 +64,37 @@ export function AboutBio() {
         {afterMoney}
       </p>
       <p className="text-muted leading-relaxed">{bio[2]}</p>
+    </div>
+  );
+}
+
+export function AboutHeroVideo() {
+  const t = useT();
+  const p = t.aboutPage;
+  const watchUrl = `https://www.youtube.com/watch?v=${ABOUT_YOUNG_TUTORIAL_VIDEO_ID}`;
+
+  return (
+    <div className="w-full min-w-0">
+      <div className="aspect-video w-full overflow-hidden rounded-2xl border border-border bg-black/5 shadow-lg shadow-black/5">
+        <iframe
+          className="h-full w-full"
+          src={`https://www.youtube.com/embed/${ABOUT_YOUNG_TUTORIAL_VIDEO_ID}?autoplay=1&mute=1&start=878`}
+          title={p.youngTutorialVideoIframeTitle}
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+          loading="lazy"
+        />
+      </div>
+      <p className="mt-3 text-xs text-muted leading-relaxed">{p.youngTutorialVideoCaption}</p>
+      <a
+        href={watchUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-2 inline-block text-xs font-medium text-accent hover:text-accent-hover underline-offset-2 hover:underline"
+      >
+        {p.youngTutorialVideoOpenYouTube}
+      </a>
     </div>
   );
 }

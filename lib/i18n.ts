@@ -27,6 +27,10 @@ export const translations = {
       { value: "5k+", label: "Monthly leads generated" },
       { value: "50%", label: "CPL reduction" },
     ],
+    trustedBrands: {
+      label: "Brands & teams",
+      title: "Organizations I've built with",
+    },
     services: {
       label: "What I do",
       title: "Not a developer. Not a marketer.\nBoth.",
@@ -157,13 +161,15 @@ export const translations = {
       tagline: "I build digital systems that grow revenue.\nPanama City, Panama.",
       pages: "Pages",
       contact: "Contact",
+      logosDisclaimer:
+        "I don't own these brands—logos belong to their owners. Shown for context only; they may be past employers, clients, or otherwise tied to my work.",
       rights: "© 2026 José Martínez. All rights reserved.",
       built: "Built with Next.js & Tailwind",
     },
     socialBio: {
       metaTitle: "Links",
       metaDescription:
-        "José | AI & Growth — digital products, AI, e-commerce. Links to resources, book a call, and more.",
+        "José | AI & Growth. Digital products, AI, e-commerce. Links to resources, book a call, and more.",
       displayName: "José | AI & Growth",
       handle: "@josem.crea",
       bioLines: [
@@ -190,12 +196,12 @@ export const translations = {
       label: "Projects",
       title: "What I've",
       titleAccent: "built",
-      subtitle: "Six documented projects: insurtech platforms, apps, and automation. Some are still active; others were point deliveries or legacy.",
+      subtitle: "Seven documented projects: insurtech platforms, apps, and automation. Some are still active. Others were point deliveries or legacy.",
       stats: [
-        { value: "6", label: "Projects" },
+        { value: "7", label: "Projects" },
         { value: "3", label: "Active now" },
-        { value: "3+", label: "Countries (LatAm)" },
-        { value: "2024–25", label: "Modern stack" },
+        { value: "2", label: "Markets" },
+        { value: "2024+", label: "Modern stack" },
       ],
       allTitle: "All projects",
       allSubtitle: "Filter by category to find what you're looking for.",
@@ -266,7 +272,7 @@ export const translations = {
     aboutPage: {
       label: "About",
       experienceLabel: "Experience & Education",
-      experienceTitle: "From Venezuela to Panama, from CS dropout to digital builder.",
+      experienceTitle: "Where I've focused my time and learning.",
       principlesLabel: "Principles",
       principlesTitle: "What guides how I make decisions.",
       stackLabel: "Stack",
@@ -274,10 +280,15 @@ export const translations = {
       ctaTitle: "Let's work together?",
       ctaSubtitle: "Open to product projects, e-commerce and growth consulting, and applied AI collaborations.",
       ctaButton: "Book a 15-min call",
+      youngTutorialVideoIframeTitle:
+        "Childhood video: explaining a program that validates email addresses",
+      youngTutorialVideoCaption:
+        "An old recording from when I was learning out loud: walking through a small program that checks whether an email is valid.",
+      youngTutorialVideoOpenYouTube: "Open on YouTube",
       bio: [
         "I've been building things since before I knew what \"software\" meant. Assembled my first PC at 6, built hobby websites as a teenager, and eventually turned that curiosity into a career. I started Software Engineering at UTP in 2017, dropped out after two years, and pivoted to Digital Business. Not because I lost interest in technology. Because I realized I wanted to connect it to real commercial problems.",
         "Since 2019 I've been in the digital industry. Seven years learning how businesses actually grow. Most of that time at Seguros SURA, where I led Panama's first multiproduct digital insurance platform, growing it +200% YoY and managing more than $2M in digital sales.",
-        "Today I work at Astro Asistencias, a startup where I was the first hire and lead digital sales while also building product. On the side I ship my own projects: Birriapp, Reggi. I share what I learn on Instagram and TikTok (@josem.crea) in Spanish, for the LatAm builder community.",
+        "Today I work at Astro Asistencias, a startup where I was the first hire and lead digital sales while also building product. On the side I ship personal projects, like Birriapp. I share what I learn on Instagram and TikTok (@josem.crea) in Spanish, for the LatAm builder community.",
       ],
       timeline: [
         {
@@ -326,7 +337,7 @@ export const translations = {
           year: "Age 6 onwards",
           role: "Self-taught builder",
           company: "Hobby and curiosity",
-          location: "Venezuela",
+          location: "Early years",
           description:
             "Built and upgraded PCs as a kid, made websites as a teenager just for fun. The curiosity for how things work technically has always been there, long before it became a career. That foundation is what makes the technical side feel natural today.",
           tags: ["Hardware", "Web", "Self-taught", "Curiosity"],
@@ -343,7 +354,7 @@ export const translations = {
       notion: {
         title: "How I use AI every day: my real tools and workflows",
         description:
-          "One living page on Notion—tools, prompts, and flows I actually use, not a generic stack list.",
+          "One living page on Notion: tools, prompts, and flows I actually use, not a generic stack list.",
         openExternal: "Open in Notion",
         openUrl: "https://josemcrea.notion.site/cca1637591a84b38bea1297c959ef9cf",
         imageAlt: "Notion page preview: daily AI tools and workflows",
@@ -351,7 +362,7 @@ export const translations = {
       merkappArticle: {
         title: "The best online supermarket experience I've had",
         description:
-          "A walkthrough of search that understands intent, predictive results, frictionless cart actions, clear delivery windows, substitution preferences, local payment options, and WhatsApp updates—why UX was the real product.",
+          "A walkthrough of search that understands intent, predictive results, frictionless cart actions, clear delivery windows, substitution preferences, local payment options, and WhatsApp updates. Why UX was the real product.",
         openExternal: "Read on LinkedIn",
         openUrl:
           "https://www.linkedin.com/pulse/la-mejor-experiencia-de-supermercado-online-que-he-tenido-mart%C3%ADnez-ygqke/",
@@ -392,7 +403,7 @@ export const translations = {
       liveSiteOf: "Live site · {name}",
       embeddedPreview: "Embedded preview on this site.",
       openProductionUrl: "Open production URL →",
-      iframeBlocked: "If it doesn't load, the site may block iframes —",
+      iframeBlocked: "If it doesn't load, the site may block iframes.",
       openInNewTab: "open in new tab",
     },
   },
@@ -423,6 +434,10 @@ export const translations = {
       { value: "5k+", label: "Leads mensuales generados" },
       { value: "50%", label: "Reducción de CPL" },
     ],
+    trustedBrands: {
+      label: "Marcas y equipos",
+      title: "Organizaciones con las que he construido",
+    },
     services: {
       label: "Qué hago",
       title: "No soy dev. No soy marketer.\nSoy los dos.",
@@ -554,13 +569,15 @@ export const translations = {
         "Construyo sistemas digitales que generan resultados.\nPanama City, Panamá.",
       pages: "Páginas",
       contact: "Contacto",
+      logosDisclaimer:
+        "No soy titular de estas marcas; los logotipos pertenecen a sus dueños. Aparecen solo como contexto: pueden ser empleadores anteriores, clientes u otra relación con mi trabajo.",
       rights: "© 2026 José Martínez. Todos los derechos reservados.",
       built: "Construido con Next.js y Tailwind",
     },
     socialBio: {
       metaTitle: "Enlaces",
       metaDescription:
-        "José | IA & Growth — productos digitales, IA, e-commerce. Enlaces a recursos, agenda y más.",
+        "José | IA & Growth. Productos digitales, IA, e-commerce. Enlaces a recursos, agenda y más.",
       displayName: "José | IA & Growth",
       handle: "@josem.crea",
       bioLines: [
@@ -587,12 +604,12 @@ export const translations = {
       label: "Proyectos",
       title: "Lo que he",
       titleAccent: "construido",
-      subtitle: "Seis proyectos documentados: plataformas insurtech, apps y automatización. Algunos siguen activos; otros fueron entregas puntuales o legacy.",
+      subtitle: "Siete proyectos documentados: plataformas insurtech, apps y automatización. Algunos siguen activos. Otros fueron entregas puntuales o legacy.",
       stats: [
-        { value: "6", label: "Proyectos" },
+        { value: "7", label: "Proyectos" },
         { value: "3", label: "Activos ahora" },
-        { value: "3+", label: "Países (LatAm)" },
-        { value: "2024–25", label: "Stack moderno" },
+        { value: "2", label: "Mercados" },
+        { value: "2024+", label: "Stack moderno" },
       ],
       allTitle: "Todos los proyectos",
       allSubtitle: "Filtra por categoría para encontrar lo que buscas.",
@@ -663,7 +680,7 @@ export const translations = {
     aboutPage: {
       label: "Sobre mí",
       experienceLabel: "Experiencia y Educación",
-      experienceTitle: "De Venezuela a Panamá, de estudiante de CS a builder digital.",
+      experienceTitle: "Dónde he puesto el tiempo y el aprendizaje.",
       principlesLabel: "Principios",
       principlesTitle: "Lo que guía cómo tomo decisiones.",
       stackLabel: "Stack",
@@ -671,10 +688,15 @@ export const translations = {
       ctaTitle: "¿Trabajamos juntos?",
       ctaSubtitle: "Abierto a proyectos de producto, consultoría de e-commerce y growth, y colaboraciones de IA aplicada.",
       ctaButton: "Agenda una llamada de 15 min",
+      youngTutorialVideoIframeTitle:
+        "Video de la infancia: explicando un programa que valida correos electrónicos",
+      youngTutorialVideoCaption:
+        "Una grabación vieja, aprendiendo en voz alta: un programa que verifica si un correo es válido.",
+      youngTutorialVideoOpenYouTube: "Abrir en YouTube",
       bio: [
         "He estado construyendo cosas desde antes de saber qué significaba \"software\". Armé mi primera PC a los 6 años, construí sitios web por hobby de adolescente, y eventualmente convertí esa curiosidad en una carrera. Empecé Ingeniería en Sistemas en la UTP en 2017, la dejé después de dos años y me pasé a Negocios Digitales. No porque perdí el interés en la tecnología. Sino porque me di cuenta de que quería conectarla con problemas comerciales reales.",
         "Desde 2019 estoy en la industria digital. Siete años aprendiendo cómo crecen los negocios de verdad. La mayor parte de ese tiempo en Seguros SURA, donde lideré la primera plataforma digital multiproducto de seguros en Panamá, haciéndola crecer +200% YoY y gestionando más de $2M en ventas digitales.",
-        "Hoy trabajo en Astro Asistencias, una startup donde fui la primera contratación y lidero ventas digitales mientras también construyo producto. En paralelo lanzo mis propios proyectos: Birriapp, Reggi. Comparto lo que aprendo en Instagram y TikTok (@josem.crea) en español, para la comunidad de builders de LatAm.",
+        "Hoy trabajo en Astro Asistencias, una startup donde fui la primera contratación y lidero ventas digitales mientras también construyo producto. En paralelo lanzo proyectos personales, como Birriapp. Comparto lo que aprendo en Instagram y TikTok (@josem.crea) en español, para la comunidad de builders de LatAm.",
       ],
       timeline: [
         {
@@ -735,7 +757,7 @@ export const translations = {
           year: "Desde los 6 años",
           role: "Autodidacta constructor",
           company: "Hobby y curiosidad",
-          location: "Venezuela",
+          location: "Primeros años",
           description:
             "Armé y mejoré PCs de niño, hice sitios web de adolescente por hobby. La curiosidad por cómo funcionan las cosas a nivel técnico siempre estuvo ahí, mucho antes de que fuera una carrera. Esa base es lo que hace que el lado técnico se sienta natural hoy.",
           tags: ["Hardware", "Web", "Autodidacta", "Curiosidad"],
@@ -762,7 +784,7 @@ export const translations = {
       merkappArticle: {
         title: "La mejor experiencia de supermercado online que he tenido",
         description:
-          "Un recorrido por el buscador que entiende intención, resultados predictivos, carrito sin fricción, ventanas de entrega claras, preferencias de sustitución, métodos de pago locales y avisos por WhatsApp: por qué la UX fue el producto.",
+          "Un recorrido por el buscador que entiende intención, resultados predictivos, carrito sin fricción, ventanas de entrega claras, preferencias de sustitución, métodos de pago locales y avisos por WhatsApp. Por qué la UX fue el producto.",
         openExternal: "Leer en LinkedIn",
         openUrl:
           "https://www.linkedin.com/pulse/la-mejor-experiencia-de-supermercado-online-que-he-tenido-mart%C3%ADnez-ygqke/",
@@ -803,7 +825,7 @@ export const translations = {
       liveSiteOf: "Sitio en vivo · {name}",
       embeddedPreview: "Vista previa embebida en este sitio.",
       openProductionUrl: "Abrir URL de producción →",
-      iframeBlocked: "Si no carga, el sitio puede bloquear iframes —",
+      iframeBlocked: "Si no carga, el sitio puede bloquear iframes.",
       openInNewTab: "abrir en nueva pestaña",
     },
   },

@@ -20,11 +20,11 @@ export const metadata: Metadata = {
     canonical: SITE_URL,
   },
   title: {
-    default: "José Martínez — Digital Systems that Grow Revenue",
+    default: "José Martínez | Digital Systems that Grow Revenue",
     template: "%s | José Martínez",
   },
   description:
-    "I build digital systems that grow revenue — landing pages, e-commerce platforms, automations, and AI pipelines. Based in Panama City.",
+    "I build digital systems that grow revenue: landing pages, e-commerce platforms, automations, and AI pipelines. Based in Panama City.",
   keywords: [
     "José Martínez",
     "digital sales",
@@ -43,15 +43,15 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: SITE_URL,
     siteName: "José Martínez",
-    title: "José Martínez — Digital Systems that Grow Revenue",
+    title: "José Martínez | Digital Systems that Grow Revenue",
     description:
-      "I build digital systems that grow revenue — landing pages, e-commerce platforms, automations, and AI pipelines.",
+      "I build digital systems that grow revenue: landing pages, e-commerce platforms, automations, and AI pipelines.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "José Martínez — Digital Systems that Grow Revenue",
+    title: "José Martínez | Digital Systems that Grow Revenue",
     description:
-      "I build digital systems that grow revenue — landing pages, e-commerce platforms, automations, and AI pipelines.",
+      "I build digital systems that grow revenue: landing pages, e-commerce platforms, automations, and AI pipelines.",
     creator: "@josem.crea",
   },
   robots: {

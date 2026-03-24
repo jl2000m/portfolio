@@ -17,6 +17,7 @@ import {
   AboutSectionLabel,
   AboutPageLabel,
   AboutBio,
+  AboutHeroVideo,
   AboutTimeline,
   AboutCTA,
 } from "@/components/AboutPageHeader";
@@ -24,7 +25,7 @@ import {
 export const metadata: Metadata = {
   title: "About",
   description:
-    "José Martínez — bridging business and technology. E-commerce, applied AI, and growth from Panama.",
+    "José Martínez: business and technology. E-commerce, applied AI, and growth from Panama.",
 };
 
 const values = [
@@ -78,48 +79,53 @@ export default function AboutPage() {
       <Nav />
       <main className="pt-24">
         {/* Hero */}
-        <section className="max-w-4xl mx-auto px-6 py-16">
+        <section className="max-w-3xl mx-auto px-6 py-20">
           <AboutPageLabel />
 
-          <div className="flex items-center gap-5 mb-4">
+          <div className="flex flex-col items-center text-center mb-12">
             <Image
               src="/jose-martinez.jpeg"
               alt="José Martínez"
-              width={80}
-              height={80}
-              className="rounded-full ring-2 ring-border object-cover"
+              width={112}
+              height={112}
+              className="rounded-full ring-2 ring-border object-cover mb-5"
             />
-            <h1 className="font-jakarta font-extrabold text-5xl md:text-6xl text-fg tracking-tight">
+            <h1 className="font-jakarta font-extrabold text-4xl md:text-5xl text-fg tracking-tight mb-3">
               José Martínez
             </h1>
+            <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1 text-sm text-muted">
+              <span className="inline-flex items-center gap-2">
+                <MapPin size={14} className="text-accent" />
+                Panama City, Panama
+              </span>
+              <a
+                href="https://linkedin.com/in/jlmv/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 hover:text-accent transition-colors"
+              >
+                <Linkedin size={14} />
+                linkedin.com/in/jlmv
+              </a>
+              <a
+                href="https://instagram.com/josem.crea"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 hover:text-accent transition-colors"
+              >
+                <Instagram size={14} />
+                @josem.crea
+              </a>
+            </div>
           </div>
 
-          <div className="flex flex-wrap items-center gap-4 mb-8">
-            <span className="inline-flex items-center gap-2 text-sm text-muted">
-              <MapPin size={14} className="text-accent" />
-              Panama City, Panama
-            </span>
-            <a
-              href="https://linkedin.com/in/jlmv/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm text-muted hover:text-accent transition-colors"
-            >
-              <Linkedin size={14} />
-              linkedin.com/in/jlmv
-            </a>
-            <a
-              href="https://instagram.com/josem.crea"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm text-muted hover:text-accent transition-colors"
-            >
-              <Instagram size={14} />
-              @josem.crea
-            </a>
+          <div className="w-full max-w-xl mx-auto mb-12">
+            <AboutHeroVideo />
           </div>
 
-          <AboutBio />
+          <div className="max-w-2xl mx-auto">
+            <AboutBio />
+          </div>
         </section>
 
         {/* Timeline */}

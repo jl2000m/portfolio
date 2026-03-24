@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "RM Seguros — Vida (preview)",
+  title: "RM Seguros | Vida (preview)",
   description: "Vista previa estática de la landing de seguros de vida.",
   robots: { index: false, follow: false },
 };
@@ -68,7 +68,8 @@ export default function RmVidaEmbedPreviewPage() {
 
       <footer className="border-t border-white/[0.06] px-5 py-3 text-center text-[10px] leading-snug text-white/35">
         Vista previa estática en este portfolio · Producción:{" "}
-        <span className="text-white/50">vida.rmsegurospty.com</span> — live el{" "}
+        <span className="text-white/50">vida.rmsegurospty.com</span>
+        {", en vivo el "}
         <span className="text-white/50">25 de marzo</span>
       </footer>
     </div>

@@ -124,9 +124,14 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 pt-6 border-t border-border flex flex-col md:flex-row items-center justify-between gap-2">
-          <span className="text-xs text-muted/50">{t.footer.rights}</span>
-          <span className="text-xs text-muted/50">{t.footer.built}</span>
+        <div className="mt-10 space-y-4 border-t border-border pt-6">
+          <p className="mx-auto max-w-lg px-2 text-center text-[10px] leading-snug text-muted/50 md:text-xs">
+            {t.footer.logosDisclaimer}
+          </p>
+          <div className="flex flex-col items-center justify-between gap-2 border-t border-border pt-4 md:flex-row">
+            <span className="text-xs text-muted/50">{t.footer.rights}</span>
+            <span className="text-xs text-muted/50">{t.footer.built}</span>
+          </div>
         </div>
       </div>
     </footer>

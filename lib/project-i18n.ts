@@ -11,6 +11,7 @@ const TAG_LABELS_ES: Record<string, string> = {
   Growth: "Crecimiento",
   Compliance: "Cumplimiento normativo",
   KYC: "KYC",
+  AI: "IA",
   App: "App",
   Supabase: "Supabase",
   "Performance Media": "Medios de performance",
@@ -77,6 +78,31 @@ const PROJECT_COPY_ES: Record<string, ProjectCopyEs> = {
       "Frontend (Next.js) → API Spring Boot → PostgreSQL (JOOQ ORM) → API de Seguros SURA + scraper Bluebook. Auth JWT, REST stateless, transacciones ACID con bloqueo optimista.",
     learnings:
       "Spring Boot con JOOQ es un stack infravalorado para APIs financieras. Type-safety de punta a punta desde la BD hasta el cliente. TestContainers para pruebas de integración contra una BD real cambia por completo la calidad de QA.",
+  },
+  "cobertura-completa-advisor": {
+    name: "Asesor IA Cobertura Completa",
+    tagline: "Orientación con RAG, modelos flagship y evaluación continua sobre cotizaciones reales.",
+    description:
+      "Experiencia asistida por IA para Cobertura Completa en Astro Asistencias: recomendaciones y seguimiento anclados a la cotización en vivo, con RAG sobre documentación aprobada de aseguradoras cuando el usuario pregunta por condiciones, exclusiones o endosos. Las recomendaciones se razonan con un enfoque tipo MECE (dimensiones de decisión mutuamente excluyentes que entre todas cubren lo relevante), para que el asistente no se quede en “siempre el más barato.” La generación usa modelos flagship de proveedores líderes. El diseño incluye evaluación en producción, no solo benchmarks puntuales. Lo que ve el cliente también queda en nuestro CRM para que el equipo siga con el contexto completo.",
+    problem:
+      "Las cotizaciones con varias aseguradoras saturan. Deducibles y beneficios compiten por atención. Un chat genérico o se queda corto o inventa cobertura. Hacía falta orientación personal que respete lo cotizado y una forma de saber qué modelo flagship y qué prompts aguantan con tráfico real.",
+    features: [
+      "Prompting inspirado en MECE: el modelo evalúa cada plan cotizado en dimensiones separadas (por ejemplo precio, beneficios y límites, solidez de la aseguradora, encaje con conductor y vehículo) antes de sintetizar, para no repetir la misma idea con distinto nombre y no saltarse por accidente un factor clave",
+      "Texto de recomendación y siguientes preguntas sugeridas, anclados a la cotización en vivo, no a consejos genéricos de seguros",
+      "Seguimiento por preguntas con reglas estrictas: comparar solo lo que figura en las opciones cotizadas, tono local para Panamá",
+      "RAG (generación aumentada por recuperación): fragmentos con embeddings de material aprobado por aseguradora, búsqueda semántica y respuestas acotadas al producto correcto",
+      "Enrutamiento: flujos simples de precio o “cuál plan” sin RAG pesado. RAG completo cuando la pregunta exige lenguaje de póliza",
+      "Modelos flagship de OpenAI y Anthropic para la generación sensible. Modelos más livianos donde basta clasificar o enrutar",
+      "Evaluación de modelos en producción: registro sistemático de costo, latencia y qué camino corrió (generación, cache, RAG) para comparar proveedores y prompts con conversiones reales, no solo con slides",
+      "Cache y límites de uso para que el uso de modelos flagship siga rápido y sostenible a escala",
+      "Las recomendaciones y respuestas de seguimiento se sincronizan con nuestro CRM en el contacto u oportunidad, para que ventas y operaciones vean la misma orientación que recibió el usuario",
+    ],
+    architecture:
+      "APIs en Next.js, Vercel AI SDK, salidas estructuradas para la UI, pipeline RAG (embeddings + vector store en Postgres/Supabase), stack de la correduría para cotizaciones y cliente, e integración con CRM para que las salidas de la IA queden en el expediente con el que trabaja el equipo a diario.",
+    learnings:
+      "El RAG da credibilidad en letra chica. El JSON de la cotización manda en beneficios. Una rúbrica tipo MECE evita respuestas perezosas de “gana el más barato” y deja los trade offs explícitos. Los modelos flagship marcan la calidad, pero sin evaluación en producción no ves costo ni regresiones. Salidas estructuradas más telemetría convierten el tráfico vivo en el verdadero set de evaluación.",
+    liveUrlNote:
+      "Vive dentro del flujo de auto y Cobertura Completa de Astro. Mismo sitio en vivo, producto con superficie propia.",
   },
   birriapp: {
     tagline: "Coordina partidos. Cobra al instante.",

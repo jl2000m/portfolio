@@ -5,6 +5,9 @@ import Hero from "@/components/Hero";
 import StatStrip from "@/components/StatStrip";
 import { projects, featuredSlugs } from "@/lib/projects";
 
+const TrustedBrandsSection = dynamic(
+  () => import("@/components/TrustedBrandsSection")
+);
 const ServicesSection = dynamic(() => import("@/components/ServicesSection"));
 const ProjectsClientSection = dynamic(
   () => import("@/components/ProjectsClientSection")
@@ -19,7 +22,7 @@ const BookCallSection = dynamic(() => import("@/components/BookCallSection"));
 const Footer = dynamic(() => import("@/components/Footer"));
 
 export const metadata: Metadata = {
-  title: "José Martínez — Digital Systems that Grow Revenue",
+  title: "José Martínez | Digital Systems that Grow Revenue",
 };
 
 export default function HomePage() {
@@ -36,6 +39,7 @@ export default function HomePage() {
         <div className="border-t border-border">
           <ServicesSection />
         </div>
+        <TrustedBrandsSection />
         {/* Featured Projects */}
         <ProjectsClientSection projects={featuredProjects} />
         <div className="border-t border-border">
