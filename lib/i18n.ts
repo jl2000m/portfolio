@@ -1,4 +1,5 @@
 import { faroPageEn, faroPageEs } from "./i18n-faro";
+import { faroProposalEn, faroProposalEs } from "./i18n-faro-proposal";
 
 export const translations = {
   en: {
@@ -191,6 +192,7 @@ export const translations = {
         email: "Email",
         instagram: "Instagram",
         tiktok: "TikTok",
+        birriWaitlist: "Birriapp Waitlist ⚽🚀",
         resources: "Resources & articles",
       },
     },
@@ -466,6 +468,7 @@ export const translations = {
         },
       ],
     },
+    faroProposal: faroProposalEn,
   },
 
   es: {
@@ -659,6 +662,7 @@ export const translations = {
         email: "Correo",
         instagram: "Instagram",
         tiktok: "TikTok",
+        birriWaitlist: "Lista de espera Birriapp ⚽🚀",
         resources: "Recursos y artículos",
       },
     },
@@ -869,6 +873,7 @@ export const translations = {
       },
     },
     faroPage: faroPageEs,
+    faroProposal: faroProposalEs,
     projectStatus: {
       active: "Activo",
       shipped: "Entregado",

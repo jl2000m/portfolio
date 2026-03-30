@@ -1,5 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async redirects() {
+    return [
+      {
+        source: "/focal/consultancy/propuesta/contrato",
+        destination: "/faro-consultancy/propuesta/contrato",
+        permanent: false,
+      },
+    ];
+  },
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "cdn.simpleicons.org" },
