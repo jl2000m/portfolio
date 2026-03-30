@@ -32,6 +32,11 @@ const statusStyle: Record<
     bg: "rgba(156, 163, 175, 0.1)",
     dot: "#9ca3af",
   },
+  comingSoon: {
+    color: "#ff0000",
+    bg: "rgba(255, 0, 0, 0.08)",
+    dot: "#ff0000",
+  },
 };
 
 export default function StatusBadge({ status, className = "" }: StatusBadgeProps) {

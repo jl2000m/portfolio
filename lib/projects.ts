@@ -1,4 +1,9 @@
-export type ProjectStatus = "active" | "shipped" | "legacy" | "paused";
+export type ProjectStatus =
+  | "active"
+  | "shipped"
+  | "legacy"
+  | "paused"
+  | "comingSoon";
 
 export interface Project {
   slug: string;
@@ -153,8 +158,8 @@ export const projects: Project[] = [
     slug: "birriapp",
     name: "Birriapp",
     tagline: "Coordinate matches. Collect instantly.",
-    status: "paused",
-    accent: "#34d399",
+    status: "active",
+    accent: "#ff0000",
     tags: ["Mobile", "App", "Supabase"],
     stack: [
       "Next.js 15",
@@ -181,17 +186,19 @@ export const projects: Project[] = [
       "Next.js web + React Native mobile → Supabase (PostgreSQL + RLS + Auth + Realtime) → Firebase (push notifications) + Google Maps",
     learnings:
       "Implementing Row Level Security in Supabase from the start saves weeks of work. PostgreSQL triggers for payment status sync eliminate race conditions that would be complex to handle on the frontend.",
-    liveUrl: null,
+    liveUrl:
+      "https://birriapp.com/?utm_source=josemcrea&utm_medium=portfolio&utm_campaign=project_birriapp",
     githubUrl: null,
     coverImage: "/projects/birriapp.webp",
     previewEmbedUrl: null,
-    liveUrlNote: null,
+    liveUrlNote:
+      "The marketing site is live at birriapp.com. The app is coming soon — join the waitlist for early access.",
   },
   {
     slug: "reggi",
     name: "Reggi",
     tagline: "Digital due diligence, without friction.",
-    status: "active",
+    status: "shipped",
     accent: "#00d0ff",
     tags: ["Web", "Compliance", "KYC"],
     stack: [
@@ -230,7 +237,7 @@ export const projects: Project[] = [
     slug: "excenet",
     name: "Excenet Asistencias",
     tagline: "First-generation digital asistencias platform.",
-    status: "legacy",
+    status: "shipped",
     accent: "#f59e0b",
     tags: ["Web", "FinTech", "Venezuela"],
     stack: [
@@ -269,9 +276,10 @@ export const projects: Project[] = [
       "Building a correct multi-level commission system from the start is much harder than it looks. Technical debt in RLS with hierarchical roles eventually required a complete refactor. In volatile markets, pricing automation is not a nice-to-have.",
     liveUrl: "https://www.excenet.com.ve/",
     githubUrl: null,
-    coverImage: "/projects/excenet.webp",
+    coverImage: "/excenet.png",
     previewEmbedUrl: null,
-    liveUrlNote: null,
+    liveUrlNote:
+      "Live production site — ExceNet customer experience for assistance products in Venezuela (represented by MIDC Inversiones y Asesoría C.A.).",
   },
   {
     slug: "rm-seguros",
@@ -304,10 +312,10 @@ export const projects: Project[] = [
       "Sometimes a small but clear deliverable opens more conversations than a long technical demo. It doesn't replace the final product, but it sets expectations straight.",
     liveUrl: "https://vida.rmsegurospty.com/",
     githubUrl: null,
-    coverImage: "/projects/rm-seguros.webp",
-    previewEmbedUrl: "/embed/rm-vida",
+    coverImage: "/rm.png",
+    previewEmbedUrl: null,
     liveUrlNote:
-      "The production domain is still not stable: static preview here. Live at vida.rmsegurospty.com.",
+      "Live production site — life insurance quoting and lead capture for RM Seguros (WorldWide Medical, Panama).",
   },
 ];
 

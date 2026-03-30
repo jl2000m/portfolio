@@ -91,10 +91,16 @@ export function ProjectDetailClient({
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold rounded-xl bg-accent text-white hover:bg-accent-hover transition-colors"
+                    className={`inline-flex items-center gap-2 px-5 py-2.5 text-sm font-semibold rounded-xl text-white transition-colors ${
+                      project.status === "comingSoon"
+                        ? "bg-[#ff0000] hover:bg-[#e60000]"
+                        : "bg-accent hover:bg-accent-hover"
+                    }`}
                   >
                     <ExternalLink size={14} />
-                    {d.viewLive}
+                    {project.status === "comingSoon"
+                      ? d.joinWaitlist
+                      : d.viewLive}
                   </a>
                 )}
                 {project.githubUrl && (

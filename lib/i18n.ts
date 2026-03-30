@@ -394,6 +394,7 @@ export const translations = {
       shipped: "Shipped",
       legacy: "Legacy",
       paused: "Paused",
+      comingSoon: "Coming soon",
     },
     projectGrid: {
       all: "All",
@@ -405,6 +406,7 @@ export const translations = {
       back: "Projects",
       backFromFaro: "F·A·R·O· page",
       viewLive: "View live",
+      joinWaitlist: "Join waitlist",
       code: "Code",
       problem: "The problem",
       howItWorks: "How the system works",
@@ -879,6 +881,7 @@ export const translations = {
       shipped: "Entregado",
       legacy: "Legacy",
       paused: "En pausa",
+      comingSoon: "Próximamente",
     },
     projectGrid: {
       all: "Todos",
@@ -890,6 +893,7 @@ export const translations = {
       back: "Proyectos",
       backFromFaro: "Página F·A·R·O·",
       viewLive: "Ver en vivo",
+      joinWaitlist: "Unirme a la lista",
       code: "Código",
       problem: "El problema",
       howItWorks: "Cómo funciona el sistema",

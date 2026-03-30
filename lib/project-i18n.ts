@@ -122,6 +122,8 @@ const PROJECT_COPY_ES: Record<string, ProjectCopyEs> = {
       "Web Next.js + app móvil React Native → Supabase (PostgreSQL + RLS + Auth + Realtime) → Firebase (push) + Google Maps",
     learnings:
       "Implementar Row Level Security en Supabase desde el día uno ahorra semanas. Los triggers de PostgreSQL para el estado de pagos eliminan condiciones de carrera que en frontend serían complejas.",
+    liveUrlNote:
+      "El sitio de birriapp.com ya está en vivo. La app llega pronto — únete a la lista de espera para acceso anticipado.",
   },
   reggi: {
     tagline: "Debida diligencia digital, sin fricción.",
@@ -166,6 +168,8 @@ const PROJECT_COPY_ES: Record<string, ProjectCopyEs> = {
       "Monorepo Turbo: apps/admin (Next.js, puerto 3001) + apps/store (Next.js) + packages/shared. Supabase con RLS jerárquico. SOAP ANCON + API BDV + Cashea + Klaviyo.",
     learnings:
       "Montar bien un sistema de comisiones multinivel desde el inicio es más difícil de lo que parece. La deuda técnica en RLS con roles jerárquicos acabó pidiendo un refactor completo. En mercados volátiles, automatizar precios no es un lujo.",
+    liveUrlNote:
+      "Sitio en producción — experiencia ExceNet para productos de asistencia en Venezuela (representado por MIDC Inversiones y Asesoría C.A.).",
   },
   "rm-seguros": {
     tagline: "Landing de seguros de vida que convierte visitas en prospectos.",
@@ -185,7 +189,7 @@ const PROJECT_COPY_ES: Record<string, ProjectCopyEs> = {
     learnings:
       "A veces un entregable pequeño pero claro abre más conversaciones que un demo técnico largo. No reemplaza el producto final, pero alinea expectativas desde el inicio.",
     liveUrlNote:
-      "El dominio de producción aún no es estable: vista previa estática aquí. En vivo en vida.rmsegurospty.com.",
+      "Sitio en producción — cotización de vida y captación de leads para RM Seguros (WorldWide Medical, Panamá).",
   },
 };
 
