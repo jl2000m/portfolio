@@ -25,13 +25,11 @@ function TikTokIcon({ size = 18 }: { size?: number }) {
   );
 }
 
-const BIRRI_ICON_SRC = "/birriapp-icon.svg";
-
 interface BioLinkItem {
   href: string;
   label: string;
   Icon?: LucideIcon | typeof TikTokIcon;
-  /** App-style logo in the leading slot (e.g. Birriapp mark). */
+  /** Optional app-style logo in the leading slot. */
   iconSrc?: string;
   iconAlt?: string;
   external?: boolean;
@@ -50,23 +48,19 @@ function BioLinkButton({
   variant = "outline",
 }: {
   item: BioLinkItem;
-  variant?: "primary" | "outline" | "birri";
+  variant?: "primary" | "outline";
 }) {
   const { href, label, Icon, iconSrc, iconAlt, external } = item;
   const isMail = href.startsWith("mailto:");
   const className =
-    variant === "birri"
-      ? "flex w-full items-center justify-center gap-2 rounded-xl bg-[#ff0000] px-4 py-3.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-[#e60000] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ff0000]"
-      : variant === "primary"
-        ? "flex w-full items-center justify-center gap-2 rounded-xl bg-accent px-4 py-3.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-accent-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-        : "flex w-full items-center gap-3 rounded-xl border border-border bg-white px-4 py-3.5 text-left text-sm font-semibold text-fg shadow-sm transition-all hover:border-border-hover hover:bg-surface hover:shadow-md";
+    variant === "primary"
+      ? "flex w-full items-center justify-center gap-2 rounded-xl bg-accent px-4 py-3.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-accent-hover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+      : "flex w-full items-center gap-3 rounded-xl border border-border bg-white px-4 py-3.5 text-left text-sm font-semibold text-fg shadow-sm transition-all hover:border-border-hover hover:bg-surface hover:shadow-md";
 
   const iconWrapClass =
-    variant === "birri"
-      ? "flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-white"
-      : variant === "primary"
-        ? "flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/15"
-        : "flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-border bg-surface";
+    variant === "primary"
+      ? "flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/15"
+      : "flex h-9 w-9 shrink-0 items-center justify-center rounded-lg border border-border bg-surface";
 
   const inner = (
     <>
@@ -75,7 +69,7 @@ function BioLinkButton({
           // eslint-disable-next-line @next/next/no-img-element -- local SVG asset; avoids Image SVG constraints
           <img src={iconSrc} alt={iconAlt ?? ""} className="h-8 w-8 object-contain" width={32} height={32} />
         ) : Icon ? (
-          <Icon size={18} className={variant === "primary" || variant === "birri" ? "text-white" : "text-fg"} />
+          <Icon size={18} className={variant === "primary" ? "text-white" : "text-fg"} />
         ) : null}
       </span>
       <span className="min-w-0 flex-1">{label}</span>
@@ -83,9 +77,7 @@ function BioLinkButton({
         <ExternalLink
           size={16}
           className={
-            variant === "primary" || variant === "birri"
-              ? "shrink-0 text-white/80"
-              : "shrink-0 text-muted"
+            variant === "primary" ? "shrink-0 text-white/80" : "shrink-0 text-muted"
           }
           aria-hidden
         />
@@ -161,14 +153,6 @@ export function SocialBioContent() {
     },
   ];
 
-  const birriWaitlist: BioLinkItem = {
-    href: "https://birriapp.com/?utm_source=josemcrea&utm_medium=socialbio&utm_campaign=birriapp_waitlist",
-    label: t.links.birriWaitlist,
-    iconSrc: BIRRI_ICON_SRC,
-    iconAlt: "Birriapp",
-    external: true,
-  };
-
   const primary: BioLinkItem = {
     href: "/recursos",
     label: t.links.resources,
@@ -214,7 +198,6 @@ export function SocialBioContent() {
           <section aria-labelledby="socialbio-primary">
             <SectionLabel>{t.sectionPrimary}</SectionLabel>
             <div id="socialbio-primary" className="flex flex-col gap-2">
-              <BioLinkButton item={birriWaitlist} variant="birri" />
               <BioLinkButton item={primary} variant="primary" />
             </div>
           </section>

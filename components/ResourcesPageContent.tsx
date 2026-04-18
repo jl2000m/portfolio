@@ -6,6 +6,7 @@ import Image from "next/image";
 
 const NOTION_THUMB = "/resources/notion-resource-thumb.png";
 const LINKEDIN_THUMB = "/resources/linkedin-merkapp-article.png";
+const BIRRIAPP_ICON = "/birriapp-icon.svg";
 
 interface ResourceThumbFields {
   title: string;
@@ -15,30 +16,51 @@ interface ResourceThumbFields {
   imageAlt: string;
 }
 
+type ThumbnailVariant = "cover" | "icon";
+
 function ResourceThumbnailCard({
   href,
   imageSrc,
   resource,
+  thumbnailVariant = "cover",
+  thumbnailBgClassName,
 }: {
   href: string;
   imageSrc: string;
   resource: ResourceThumbFields;
+  thumbnailVariant?: ThumbnailVariant;
+  thumbnailBgClassName?: string;
 }) {
+  const isIcon = thumbnailVariant === "icon";
+
   return (
     <article className="group flex flex-col rounded-2xl border border-border bg-white overflow-hidden shadow-sm transition-all duration-200 hover:border-border-hover hover:shadow-md sm:flex-row sm:items-stretch">
       <a
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className="relative block h-[7.25rem] w-full shrink-0 bg-surface sm:h-auto sm:w-[9.5rem] md:w-[10.5rem] sm:min-h-[7.5rem] border-b border-border sm:border-b-0 sm:border-r sm:border-border outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-accent"
+        className={`relative block h-[7.25rem] w-full shrink-0 sm:h-auto sm:w-[9.5rem] md:w-[10.5rem] sm:min-h-[7.5rem] border-b border-border sm:border-b-0 sm:border-r sm:border-border outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-accent ${
+          thumbnailBgClassName ?? "bg-surface"
+        }`}
       >
-        <Image
-          src={imageSrc}
-          alt={resource.imageAlt}
-          fill
-          className="object-cover object-center transition-opacity duration-200 group-hover:opacity-[0.92]"
-          sizes="(max-width: 640px) 100vw, 168px"
-        />
+        {isIcon ? (
+          <span className="absolute inset-0 flex items-center justify-center p-5">
+            {/* eslint-disable-next-line @next/next/no-img-element -- local SVG asset; next/image disallows SVGs without dangerouslyAllowSVG */}
+            <img
+              src={imageSrc}
+              alt={resource.imageAlt}
+              className="max-h-full max-w-full object-contain transition-opacity duration-200 group-hover:opacity-[0.92]"
+            />
+          </span>
+        ) : (
+          <Image
+            src={imageSrc}
+            alt={resource.imageAlt}
+            fill
+            className="object-cover object-center transition-opacity duration-200 group-hover:opacity-[0.92]"
+            sizes="(max-width: 640px) 100vw, 168px"
+          />
+        )}
       </a>
       <div className="flex min-w-0 flex-1 flex-col justify-center gap-2 px-4 py-4 sm:px-5 sm:py-4 md:py-5">
         <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
@@ -81,6 +103,15 @@ export default function ResourcesPageContent() {
         </p>
 
         <ul className="flex list-none flex-col gap-5 p-0 m-0">
+          <li>
+            <ResourceThumbnailCard
+              href={p.recursorKeynote.openUrl}
+              imageSrc={BIRRIAPP_ICON}
+              resource={p.recursorKeynote}
+              thumbnailVariant="icon"
+              thumbnailBgClassName="bg-gradient-to-br from-[#fff5f5] via-white to-[#ffe5e5]"
+            />
+          </li>
           <li>
             <ResourceThumbnailCard
               href={p.notion.openUrl}

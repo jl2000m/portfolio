@@ -192,7 +192,6 @@ export const translations = {
         email: "Email",
         instagram: "Instagram",
         tiktok: "TikTok",
-        birriWaitlist: "Birriapp Waitlist ⚽🚀",
         resources: "Resources & articles",
       },
     },
@@ -386,6 +385,14 @@ export const translations = {
           "https://www.linkedin.com/pulse/la-mejor-experiencia-de-supermercado-online-que-he-tenido-mart%C3%ADnez-ygqke/",
         imageAlt:
           "LinkedIn article: Merkapp delivery van and headline about online grocery UX",
+      },
+      recursorKeynote: {
+        title: "How I built Birriapp — Resources & Stack",
+        description:
+          "The real list of tools, services, libraries, and resources I used to design, build, and ship Birriapp end to end.",
+        openExternal: "Open in Notion",
+        openUrl: "https://birriapp.notion.site/recursos-keynote",
+        imageAlt: "Birriapp logo — resources and stack used to build Birriapp",
       },
     },
     faroPage: faroPageEn,
@@ -664,7 +671,6 @@ export const translations = {
         email: "Correo",
         instagram: "Instagram",
         tiktok: "TikTok",
-        birriWaitlist: "Lista de espera Birriapp ⚽🚀",
         resources: "Recursos y artículos",
       },
     },
@@ -872,6 +878,14 @@ export const translations = {
           "https://www.linkedin.com/pulse/la-mejor-experiencia-de-supermercado-online-que-he-tenido-mart%C3%ADnez-ygqke/",
         imageAlt:
           "Artículo en LinkedIn: furgón de Merkapp y titular sobre UX de supermercado online",
+      },
+      recursorKeynote: {
+        title: "Cómo construí Birriapp — Recursos & Stack",
+        description:
+          "La lista real de herramientas, servicios, librerías y recursos que usé para diseñar, construir y lanzar Birriapp de principio a fin.",
+        openExternal: "Abrir en Notion",
+        openUrl: "https://birriapp.notion.site/recursos-keynote",
+        imageAlt: "Logo de Birriapp — recursos y stack usados para construir Birriapp",
       },
     },
     faroPage: faroPageEs,
